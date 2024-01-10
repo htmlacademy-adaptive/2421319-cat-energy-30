@@ -1,0 +1,23 @@
+.hero {
+  color: $basic-white;
+
+  @media (min-width: 768px) {
+    color: $basic-black;
+  }
+}
+
+.hero__title {
+  color: inherit;
+}
+
+.hero__slogan {
+  font-family: $secondary-font;
+  font-size: 14px;
+  font-weight: 14px;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
