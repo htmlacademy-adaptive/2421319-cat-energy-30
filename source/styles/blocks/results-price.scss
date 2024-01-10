@@ -1,0 +1,11 @@
+.results-price {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 20px;
+  color: $basic-black;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
