@@ -1,4 +1,50 @@
-.footer-data__text {
-  font-size: 16px;
-  line-height: 20px;
+.footer-data {
+  display: flex;
+  justify-content: space-between;
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    align-self: center;
+  }
+
+  &__icon {
+    display: block;
+    width: 27px;
+    height: 34px;
+    mask-image: url("../../images/icons/stack.svg#htmlacademy");
+    background-color: $special-grey-2;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    content: "";
+  }
+
+  &__logo {
+
+    &--htmlacademy {
+      display: flex;
+      gap: 23px;
+
+      &:hover .footer-data__icon,
+      &:focus .footer-data__icon {
+        background-color: $basic-green;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    &--catenergy {
+
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
 }

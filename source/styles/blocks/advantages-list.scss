@@ -1,0 +1,73 @@
+.advantages-list {
+
+  &__item {
+
+    &--nutrition:before {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../images/icons/stack.svg#nutrition");
+      background-size: 25px 28px;
+      background-color: $basic-green;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+
+      @media (min-width: $tablet) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &--form:before {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../images/icons/stack.svg#form");
+      background-size: 30px 32px;
+      background-color: $basic-green;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+
+      @media (min-width: $tablet) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &--diet:before {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../images/icons/stack.svg#diet");
+      background-size: 26px 29px;
+      background-color: $basic-green;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+
+      @media (min-width: $tablet) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &--result:before {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../images/icons/stack.svg#result");
+      background-size: 26px 31px;
+      background-color: $basic-green;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+
+      @media (min-width: $tablet) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
