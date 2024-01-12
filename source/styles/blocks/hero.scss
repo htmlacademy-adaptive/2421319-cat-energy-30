@@ -1,7 +1,7 @@
 .hero {
   color: $basic-white;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     color: $basic-black;
   }
 }
@@ -16,7 +16,7 @@
   font-weight: 14px;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 20px;
   }

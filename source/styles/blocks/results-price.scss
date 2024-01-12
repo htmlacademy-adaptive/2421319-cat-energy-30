@@ -5,7 +5,7 @@
   color: $basic-black;
   text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     font-size: 20px;
   }
 }

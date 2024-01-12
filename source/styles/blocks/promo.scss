@@ -1,0 +1,14 @@
+.promo {
+
+  &__text:before {
+    display: block;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../images/icons/stack.svg#promo");
+    background-size: 56.35px 60.53px;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+  }
+}
