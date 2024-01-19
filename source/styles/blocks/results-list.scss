@@ -2,59 +2,57 @@
   display: flex;
   justify-content: center;
   gap: 32px;
+}
 
-  &__item {
-    position: relative;
-    text-align: center;
+.results-list__item {
+  position: relative;
+  text-align: center;
+}
+
+.results-list__label {
+  display: block;
+  width: 124px;
+  padding: 14.47px 0 17.53px;
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $basic-black;
+  border: 1px solid $line-color-grey-2;
+  border-radius: 3px;
+
+  @media (min-width: $tablet) {
+    width: 162px;
+    padding: 15px 0 20.7px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.results-list__text {
+  position: absolute;
+  top: 46px;
+  left: 17px;
+  display: block;
+  width: 90px;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: $grey;
+
+  @media (min-width: $tablet) {
+    position: inherit;
+    top: -10px;
+    left: auto;
+    display: inline-block;
+    width: auto;
+    padding: 0 5px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $basic-white;
   }
 
-  &__label {
-    font-family: $secondary-font;
-    font-size: 24px;
-    line-height: 24px;
-    color: $basic-black;
-    text-transform: uppercase;
-    display: block;
-    width: 124px;
-    border: 1px solid $line-color-grey-2;
-    border-radius: 3px;
-    padding: 14.47px 0 17.53px;
-    box-sizing: border-box;
-
-    @media (min-width: $tablet) {
-      font-size: 30px;
-      line-height: 37px;
-      width: 162px;
-      padding: 15px 0 20.7px;
-    }
-  }
-
-  &__text {
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    width: 90px;
-    font-size: 12px;
-    line-height: 12px;
+  @media (min-width: $desktop) {
     background-color: $grey;
-    padding: 0 10px;
-    top: 46px;
-    left: 17px;
-
-    @media (min-width: $tablet) {
-      font-size: 14px;
-      line-height: 14px;
-      padding: 0 5px;
-      top: -10px;
-      left: auto;
-      background-color: $basic-white;
-      position: inherit;
-      width: auto;
-      display: inline-block;
-    }
-
-    @media (min-width: $desktop) {
-      background-color: $grey;
-    }
   }
 }

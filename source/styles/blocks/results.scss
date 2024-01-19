@@ -10,68 +10,68 @@
   }
 
   @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 0;
     padding-bottom: 75px;
-    display: flex;
-    flex-wrap: wrap;
     background-color: $grey;
-    justify-content: space-between;
     border-top: 1px solid $line-color-grey;
   }
+}
 
-  &__container {
+.results__container {
 
-    @media (min-width: $tablet) {
-      display: flex;
-      flex-wrap: wrap;
-      padding-bottom: 99px;
-    }
-
-    @media (min-width: $desktop) {
-      padding-right: 0;
-      width: 24.5%;
-      flex-direction: column;
-    }
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 99px;
   }
 
-  &__title {
-    padding-bottom: 20px;
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    width: 24.5%;
+    padding-right: 0;
+  }
+}
 
-    @media (min-width: $tablet) {
-      padding-bottom: 30px;
-    }
+.results__title {
+  padding-bottom: 20px;
 
-    @media (min-width: $desktop) {
-      padding-top: 69px;
-      padding-bottom: 76px;
-      width: 100%;
-      background-color: $basic-white;
-    }
+  @media (min-width: $tablet) {
+    padding-bottom: 30px;
   }
 
-  &__text {
-    padding: 20px 0;
+  @media (min-width: $desktop) {
+    width: 100%;
+    padding-top: 69px;
+    padding-bottom: 76px;
+    background-color: $basic-white;
+  }
+}
 
-    @media (min-width: $tablet) {
-      padding: 30px 0 55px;
-      font-size: 16px;
-      line-height: 24px;
-    }
+.results__text {
+  padding: 20px 0;
 
-    @media (min-width: $desktop) {
-      padding: 70px 0 69px;
-    }
+  @media (min-width: $tablet) {
+    padding: 30px 0 55px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  &__slider {
+  @media (min-width: $desktop) {
+    padding: 70px 0 69px;
+  }
+}
 
-    @media (min-width: $tablet) {
-      background-color: $grey;
-    }
+.results__slider {
 
-    @media (min-width: $desktop) {
-      padding-left: 0;
-      width: 55.5%;
-    }
+  @media (min-width: $tablet) {
+    background-color: $grey;
+  }
+
+  @media (min-width: $desktop) {
+    width: 55.5%;
+    padding-left: 0;
   }
 }

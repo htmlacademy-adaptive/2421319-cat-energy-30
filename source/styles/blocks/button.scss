@@ -1,15 +1,14 @@
 .button {
   display: block;
-  box-sizing: border-box;
-  padding: 8px 44px;
   min-width: 100%;
+  padding: 8px 44px;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   color: $basic-white;
   background-color: $basic-green;
-  text-decoration: none;
-  text-align: center;
   border: none;
 }

@@ -1,27 +1,27 @@
 .results-price {
+  padding-top: 34px;
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 20px;
-  color: $basic-black;
-  text-transform: uppercase;
   text-align: center;
-  padding: 34px 0 0;
+  text-transform: uppercase;
+  color: $basic-black;
 
   @media (min-width: $tablet) {
-    font-size: 20px;
-    margin-left: auto;
     display: flex;
     flex-direction: column;
-    text-align: right;
+    margin-left: auto;
+    padding-top: 11px;
     gap: 9px;
-    padding: 11px 0;
+    font-size: 20px;
+    text-align: right;
   }
 
   @media (min-width: $desktop) {
     flex-direction: row;
-    margin-right: auto;
     margin-left: 0;
+    margin-right: auto;
+    padding-top: 50px;
     gap: 63px;
-    padding: 50px 0 0;
   }
 }

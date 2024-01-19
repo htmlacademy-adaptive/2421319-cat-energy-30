@@ -7,30 +7,30 @@
   "A B"
   "A C"
   "D D";
+}
 
-  &__image {
-    grid-area: A;
-  }
+.card__image {
+  grid-area: A;
+}
 
-  &__title {
-    grid-area: B;
-  }
+.card__title {
+  grid-area: B;
+}
 
-  &__table {
-    grid-area: C;
-  }
+.card__table {
+  grid-area: C;
+}
 
-  &__button {
-    grid-area: D;
-  }
+.card__button {
+  grid-area: D;
+}
 
-  &__text {
-    font-size: 12px;
-    line-height: 16px;
+.card__text {
+  font-size: 12px;
+  line-height: 16px;
 
-    @media (min-width: $tablet) {
-      font-size: 16px;
-      line-height: 18px;
-    }
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 18px;
   }
 }

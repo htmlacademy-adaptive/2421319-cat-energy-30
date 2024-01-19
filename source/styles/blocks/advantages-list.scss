@@ -5,191 +5,191 @@
 
   @media (min-width: $tablet) {
     flex-direction: row;
-    flex-wrap: wrap;
     gap: 135px;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop) {
     justify-content: space-between;
     gap: 0;
   }
+}
 
-  &__item {
+.advantages-list__item {
+  display: grid;
+  grid-template-columns: 60px 70%;
+  grid-gap: 20px;
+  align-items: center;
+
+  @media (min-width: $tablet) {
     display: grid;
-    grid-template-columns: 60px 70%;
-    grid-gap: 20px;
-    align-items: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-gap: 31px;
+    width: 35%;
+  }
 
-    @media (min-width: $tablet) {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto auto;
-      grid-gap: 31px;
-      width: 35%;
-    }
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    width: 22%;
+  }
 
-    @media (min-width: $desktop) {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto auto;
-      width: 22%;
-    }
+  &--nutrition {
+    position: relative;
 
-    &--nutrition {
-      position: relative;
+    &:before {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../images/icons/stack.svg#nutrition");
+      background-size: 25px 28px;
+      background-color: $basic-green;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
 
-      &:before {
+      @media (min-width: $tablet) {
         display: block;
-        width: 60px;
-        height: 60px;
-        background-image: url("../../images/icons/stack.svg#nutrition");
-        background-size: 25px 28px;
-        background-color: $basic-green;
-        background-repeat: no-repeat;
-        background-position: center;
-        content: "";
-
-        @media (min-width: $tablet) {
-          width: 80px;
-          height: 80px;
-          display: block;
-        }
-      }
-
-      &:after {
-
-        @media (min-width: $tablet) {
-          position: absolute;
-          display: block;
-          font-family: $secondary-font;
-          font-size: 280px;
-          line-height: 280px;
-          color: $basic-grey;
-          content: "1";
-          z-index: -1;
-          top: -41px;
-          right: 17px;
-        }
+        width: 80px;
+        height: 80px;
       }
     }
 
-    &--form {
-      position: relative;
+    &:after {
 
-      &:before {
+      @media (min-width: $tablet) {
+        position: absolute;
+        top: -41px;
+        right: 17px;
+        z-index: -1;
         display: block;
-        width: 60px;
-        height: 60px;
-        background-image: url("../../images/icons/stack.svg#form");
-        background-size: 30px 32px;
-        background-color: $basic-green;
-        background-repeat: no-repeat;
-        background-position: center;
-        content: "";
-
-        @media (min-width: $tablet) {
-          width: 80px;
-          height: 80px;
-        }
-      }
-
-      &:after {
-
-        @media (min-width: $tablet) {
-          position: absolute;
-          display: block;
-          font-family: $secondary-font;
-          font-size: 280px;
-          line-height: 280px;
-          color: $basic-grey;
-          content: "2";
-          z-index: -1;
-          top: -41px;
-          right: 0;
-        }
-      }
-    }
-
-    &--diet {
-      position: relative;
-
-      &:before {
-        display: block;
-        width: 60px;
-        height: 60px;
-        background-image: url("../../images/icons/stack.svg#diet");
-        background-size: 26px 29px;
-        background-color: $basic-green;
-        background-repeat: no-repeat;
-        background-position: center;
-        content: "";
-
-        @media (min-width: $tablet) {
-          width: 80px;
-          height: 80px;
-        }
-      }
-
-      &:after {
-
-        @media (min-width: $tablet) {
-          position: absolute;
-          display: block;
-          font-family: $secondary-font;
-          font-size: 280px;
-          line-height: 280px;
-          color: $basic-grey;
-          content: "3";
-          z-index: -1;
-          top: -41px;
-          right: 0;
-        }
-      }
-    }
-
-    &--result {
-      position: relative;
-
-      &:before {
-        display: block;
-        width: 60px;
-        height: 60px;
-        background-image: url("../../images/icons/stack.svg#result");
-        background-size: 26px 31px;
-        background-color: $basic-green;
-        background-repeat: no-repeat;
-        background-position: center;
-        content: "";
-
-        @media (min-width: $tablet) {
-          width: 80px;
-          height: 80px;
-        }
-      }
-
-      &:after {
-
-        @media (min-width: $tablet) {
-          position: absolute;
-          display: block;
-          font-family: $secondary-font;
-          font-size: 280px;
-          line-height: 280px;
-          color: $basic-grey;
-          content: "4";
-          z-index: -1;
-          top: -41px;
-          right: 0;
-        }
+        font-family: $secondary-font;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic-grey;
+        content: "1";
       }
     }
   }
 
-  &__text {
+  &--form {
+    position: relative;
 
-    @media (min-width: $tablet) {
-      font-size: 16px;
-      line-height: 24px;
+    &:before {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../images/icons/stack.svg#form");
+      background-size: 30px 32px;
+      background-color: $basic-green;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+
+      @media (min-width: $tablet) {
+        width: 80px;
+        height: 80px;
+      }
     }
+
+    &:after {
+
+      @media (min-width: $tablet) {
+        position: absolute;
+        top: -41px;
+        right: 0;
+        z-index: -1;
+        display: block;
+        font-family: $secondary-font;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic-grey;
+        content: "2";
+      }
+    }
+  }
+
+  &--diet {
+    position: relative;
+
+    &:before {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../images/icons/stack.svg#diet");
+      background-size: 26px 29px;
+      background-color: $basic-green;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+
+      @media (min-width: $tablet) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &:after {
+
+      @media (min-width: $tablet) {
+        position: absolute;
+        top: -41px;
+        right: 0;
+        z-index: -1;
+        display: block;
+        font-family: $secondary-font;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic-grey;
+        content: "3";
+      }
+    }
+  }
+
+  &--result {
+    position: relative;
+
+    &:before {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../images/icons/stack.svg#result");
+      background-size: 26px 31px;
+      background-color: $basic-green;
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+
+      @media (min-width: $tablet) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &:after {
+
+      @media (min-width: $tablet) {
+        position: absolute;
+        top: -41px;
+        right: 0;
+        z-index: -1;
+        display: block;
+        font-family: $secondary-font;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic-grey;
+        content: "4";
+      }
+    }
+  }
+}
+
+.advantages-list__text {
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
   }
 }

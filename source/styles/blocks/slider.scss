@@ -2,26 +2,25 @@
   display: flex;
   width: 100%;
   margin: auto;
+}
 
-  &__before {
-    position: relative;
-    overflow: hidden;
+.slider__before {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__after {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__image {
+
+  &--before {
+    transform: translate(50%,0);
   }
 
-  &__after {
-    position: relative;
-    overflow: hidden;
+  &--after {
+    transform: translate(-50%,0);
   }
-
-  &__image {
-
-    &--before {
-      transform: translate(50%,0);
-    }
-
-    &--after {
-      transform: translate(-50%,0);
-    }
-  }
-
 }

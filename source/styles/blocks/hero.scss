@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  z-index: -2;
   margin-bottom: 150px;
   text-align: center;
   color: $basic-white;
@@ -7,31 +8,27 @@
   background-position: bottom,top,top;
   background-repeat: no-repeat,repeat,no-repeat;
   background-size: auto, cover;
-  z-index: -2;
-
-  &__button {
-  }
 
   @media (min-width: $tablet) {
     color: $basic-black;
   }
+}
 
-  &__title {
-    color: inherit;
-    padding: 27px 0 25px;
-  }
+.hero__title {
+  color: inherit;
+  padding: 27px 0 25px;
+}
 
-  &__slogan {
-    margin: 0;
-    padding-bottom: 164px;
-    font-family: $secondary-font;
-    font-size: 14px;
-    line-height: 14px;
-    text-transform: uppercase;
+.hero__slogan {
+  margin: 0;
+  padding-bottom: 164px;
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
 
-    @media (min-width: $tablet) {
-      font-size: 20px;
-      line-height: 20px;
-    }
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
