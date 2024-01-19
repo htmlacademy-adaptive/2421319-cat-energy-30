@@ -1,23 +1,37 @@
 .hero {
+  position: relative;
+  margin-bottom: 150px;
+  text-align: center;
   color: $basic-white;
+  background-image: url("../../images/hero@1x.png"), linear-gradient(rgba(104,183,56,.851),rgba(104,183,56,.851)),url("../../images/hero-background@1x.jpg");
+  background-position: bottom,top,top;
+  background-repeat: no-repeat,repeat,no-repeat;
+  background-size: auto, cover;
+  z-index: -2;
+
+  &__button {
+  }
 
   @media (min-width: $tablet) {
     color: $basic-black;
   }
-}
 
-.hero__title {
-  color: inherit;
-}
+  &__title {
+    color: inherit;
+    padding: 27px 0 25px;
+  }
 
-.hero__slogan {
-  font-family: $secondary-font;
-  font-size: 14px;
-  font-weight: 14px;
-  text-transform: uppercase;
+  &__slogan {
+    margin: 0;
+    padding-bottom: 164px;
+    font-family: $secondary-font;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
 
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 20px;
+    @media (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }

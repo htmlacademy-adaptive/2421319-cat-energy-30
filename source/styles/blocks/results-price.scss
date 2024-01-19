@@ -4,8 +4,24 @@
   line-height: 20px;
   color: $basic-black;
   text-transform: uppercase;
+  text-align: center;
+  padding: 34px 0 0;
 
   @media (min-width: $tablet) {
     font-size: 20px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 9px;
+    padding: 11px 0;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: 0;
+    gap: 63px;
+    padding: 50px 0 0;
   }
 }

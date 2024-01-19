@@ -1,0 +1,27 @@
+.slider {
+  display: flex;
+  width: 100%;
+  margin: auto;
+
+  &__before {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__after {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+
+    &--before {
+      transform: translate(50%,0);
+    }
+
+    &--after {
+      transform: translate(-50%,0);
+    }
+  }
+
+}

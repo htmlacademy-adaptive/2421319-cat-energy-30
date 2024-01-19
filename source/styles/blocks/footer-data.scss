@@ -1,6 +1,13 @@
 .footer-data {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: $basic-grey;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__text {
     font-size: 16px;
@@ -12,6 +19,7 @@
     display: block;
     width: 27px;
     height: 34px;
+    margin-left: auto;
     mask-image: url("../../images/icons/stack.svg#htmlacademy");
     background-color: $special-grey-2;
     mask-repeat: no-repeat;
@@ -23,7 +31,8 @@
 
     &--htmlacademy {
       display: flex;
-      gap: 23px;
+      width: 100%;
+      padding: 20px 0 40px;
 
       &:hover .footer-data__icon,
       &:focus .footer-data__icon {
@@ -33,9 +42,20 @@
       &:active {
         opacity: 0.3;
       }
+
+      @media (min-width: $tablet) {
+        width: auto;
+        gap: 23px;
+        padding: 55px 0;
+      }
     }
 
     &--catenergy {
+      padding: 40px 0 20px;
+
+      @media (min-width: $tablet) {
+        padding: 55px 0;
+      }
 
       &:hover,
       &:focus {

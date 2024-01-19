@@ -1,22 +1,60 @@
-.results-list__label {
-  font-family: $secondary-font;
-  font-size: 24px;
-  font-weight: 24px;
-  color: $basic-black;
-  text-transform: uppercase;
+.results-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
 
-  @media (min-width: $tablet) {
-    font-size: 30px;
-    line-height: 37px;
+  &__item {
+    position: relative;
+    text-align: center;
   }
-}
 
-.results-list__text {
-  font-size: 12px;
-  font-weight: 12px;
+  &__label {
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 24px;
+    color: $basic-black;
+    text-transform: uppercase;
+    display: block;
+    width: 124px;
+    border: 1px solid $line-color-grey-2;
+    border-radius: 3px;
+    padding: 14.47px 0 17.53px;
+    box-sizing: border-box;
 
-  @media (min-width: $tablet) {
-    font-size: 14px;
-    line-height: 14px;
+    @media (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 37px;
+      width: 162px;
+      padding: 15px 0 20.7px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 90px;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: $grey;
+    padding: 0 10px;
+    top: 46px;
+    left: 17px;
+
+    @media (min-width: $tablet) {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 0 5px;
+      top: -10px;
+      left: auto;
+      background-color: $basic-white;
+      position: inherit;
+      width: auto;
+      display: inline-block;
+    }
+
+    @media (min-width: $desktop) {
+      background-color: $grey;
+    }
   }
 }

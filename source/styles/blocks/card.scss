@@ -1,9 +1,36 @@
-.card__text {
-  font-size: 12px;
-  line-height: 16px;
+.card {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
 
-  @media (min-width: $tablet) {
-    font-size: 16px;
-    line-height: 18px;
+  grid-template-areas:
+  "A B"
+  "A C"
+  "D D";
+
+  &__image {
+    grid-area: A;
+  }
+
+  &__title {
+    grid-area: B;
+  }
+
+  &__table {
+    grid-area: C;
+  }
+
+  &__button {
+    grid-area: D;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 16px;
+
+    @media (min-width: $tablet) {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 }
