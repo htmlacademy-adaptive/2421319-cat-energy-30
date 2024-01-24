@@ -27,7 +27,7 @@
   text-align: right;
 }
 
-.card-table__row td:nth-child(1) {
+.card-table__row--option td:nth-child(1) {
 
   @media (min-width: $tablet) {
     padding-right: 49px;

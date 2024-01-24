@@ -9,6 +9,8 @@
 
 .promo__text {
   padding: 59px 60px 43px;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: $basic-white;
   background-image: linear-gradient(rgba(104,183,56,.851),rgba(104,183,56,.851)), url("../../images/promo-background@1x.jpg");
@@ -25,5 +27,9 @@
     background-repeat: no-repeat;
     background-position: center;
     content: "";
+
+    @media (min-width: $tablet) {
+      margin: 57px 77px;
+    }
   }
 }

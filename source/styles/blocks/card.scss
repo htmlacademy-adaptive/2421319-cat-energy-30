@@ -20,6 +20,10 @@
     border: none;
   }
 
+  @media (min-width: $desktop) {
+    max-width: 245px;
+  }
+
   &--option {
     display: flex;
     flex-direction: column;
@@ -67,6 +71,10 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 15px 20px;
   }
 
   &--show-more {
