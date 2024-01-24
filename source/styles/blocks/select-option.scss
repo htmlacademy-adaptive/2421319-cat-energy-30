@@ -1,0 +1,40 @@
+.select-option {
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    grid-area: E;
+  }
+}
+
+.select-option__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 13px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding-bottom: 52px;
+  }
+}
+
+.select-option__legend {
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 57px;
+  }
+}
+
+.select-option__item {
+
+  @media (min-width: $tablet) {
+    width: 45%;
+  }
+
+  @media (min-width: $desktop) {
+    width: auto;
+  }
+}

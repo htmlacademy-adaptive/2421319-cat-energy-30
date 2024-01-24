@@ -1,8 +1,10 @@
 .footer-data {
   display: flex;
   flex-direction: column;
+  gap: 40px;
   align-items: center;
-  background-color: $basic-grey;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @media (min-width: $tablet) {
     flex-direction: row;
@@ -33,7 +35,6 @@
   &--htmlacademy {
     display: flex;
     width: 100%;
-    padding: 20px 0 40px;
 
     &:hover .footer-data__icon,
     &:focus .footer-data__icon {
@@ -52,7 +53,6 @@
   }
 
   &--catenergy {
-    padding: 40px 0 20px;
 
     @media (min-width: $tablet) {
       padding: 55px 0;

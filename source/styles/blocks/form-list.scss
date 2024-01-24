@@ -1,0 +1,63 @@
+.form-list__item {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+
+  &--email {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      right: 12px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url(../../images/icons/email.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+    }
+
+    @media (min-width: $desktop) {
+      width: 47.8%;
+    }
+  }
+
+  &--phone {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      right: 11px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url(../../images/icons/phone.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+    }
+
+    @media (min-width: $desktop) {
+      width: 46%;
+    }
+  }
+}
+
+.form-list__input {
+  flex: 1;
+  padding: 0 40px 0 15px;
+  height: 45px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  color: $special-dark-grey;
+  border: 1px solid $line-color-grey-2;
+
+  @media (min-width: $tablet) {
+    height: 52px;
+    font-size: 20px;
+    line-height: normal;
+  }
+}

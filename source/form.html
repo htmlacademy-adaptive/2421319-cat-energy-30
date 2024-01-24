@@ -44,11 +44,11 @@
     </header>
 
     <main class="page__main">
-      <section class="program-form container">
-        <h1 class="program-form__title title">Подбор программы</h1>
-        <form class="program-form form" action="https://echo.htmlacademy.ru/">
-          <fieldset class="form__about form-about">
-            <legend class="form-about__legend">Заполните анкету, и мы подберем программу питания для вашего кота</legend>
+      <section class="program-form">
+        <h1 class="program-form__title title container--form">Подбор программы</h1>
+        <form class="program-form__form" action="https://echo.htmlacademy.ru/">
+          <fieldset class="program-form__about form-about form container--form">
+            <legend class="form-about__legend">Заполните анкету, и мы подберем <br>программу питания для вашего кота</legend>
             <ul class="form-about__list form-list list">
               <li class="form-list__item">
                 <label class="form-list__label label" for="name">ИМЯ:*</label>
@@ -65,26 +65,26 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__select-program select-program">
+          <fieldset class="program-form__select-program select-program form container--form">
             <legend class="visually-hidden">Выберите программу.</legend>
             <ul class="select-program__list list">
               <li class="select-program__item select">
                 <label class="select__label label">
-                  <input class="visually-hidden" type="radio" name="select-program" value="slim" checked>
+                  <input class="visually-hidden select__point" type="radio" name="select-program" value="slim" checked>
                   <span class="select__mark select__mark--radio"></span>
                   <span class="select__name">похудение</span>
                 </label>
               </li>
               <li class="select-program__item select">
                 <label class="select__label label">
-                  <input class="visually-hidden" type="radio" name="select-program" value="pro">
+                  <input class="visually-hidden select__point" type="radio" name="select-program" value="pro">
                   <span class="select__mark select__mark--radio"></span>
                   <span class="select__name">Набор массы</span>
                 </label>
               </li>
               <li class="select-program__item select">
                 <label class="select__label label">
-                  <input class="visually-hidden" type="radio" name="select-program" value="advice">
+                  <input class="visually-hidden select__point" type="radio" name="select-program" value="advice">
                   <span class="select__mark select__mark--radio"></span>
                   <span class="select__name">Не знаю (Нужен ваш совет)</span>
                 </label>
@@ -92,67 +92,69 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__contacts form-contacts">
+          <fieldset class="program-form__contacts form-contacts form container--form">
             <legend class="form-contacts__legend legend">Контактные данные (владельца кота)</legend>
             <ul class="form-contacts__list form-list list">
-              <li class="form-list__item">
+              <li class="form-list__item form-list__item--email">
                 <label class="form-list__label label" for="email">E-mail:*</label>
-                <input class="form-list__input form-list__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
+                <input class="form-list__input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
               </li>
-              <li class="form-list__item">
+              <li class="form-list__item form-list__item--phone">
                 <label class="form-list__label label" for="phone">Телефон:*</label>
-                <input class="form-list__input form-list__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" id="phone" required>
+                <input class="form-list__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" id="phone" required>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="form__comment form-comment">
+          <fieldset class="program-form__comment form-comment form container--form">
             <legend class="form-comment__legend legend">Комментарий</legend>
             <label class="visually-hidden" for="comment">Расскажите обо всех повАдках кота.</label>
             <textarea class="form-comment__input" placeholder="Расскажите обо всех повАдках кота" name="comment" id="comment" cols="30" rows="5"></textarea>
           </fieldset>
 
-          <fieldset class="form__select-option select-option">
+          <fieldset class="program-form__select-option select-option form container--form">
             <legend class="select-option__legend legend">Дополнительно</legend>
               <ul class="select-option__list list">
                 <li class="select-option__item select">
                   <label class="select__label label">
-                    <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+                    <input class="visually-hidden select__point" type="checkbox" name="sweetener" checked>
                     <span class="select__mark select__mark--checkbox"></span>
                     <span class="select__name">сахарозаменитель</span>
                   </label>
                 </li>
                 <li class="select-option__item select">
                   <label class="select__label label">
-                    <input class="visually-hidden" type="checkbox" name="water">
+                    <input class="visually-hidden select__point" type="checkbox" name="water">
                     <span class="select__mark select__mark--checkbox"></span>
                     <span class="select__name">питьевая вода</span>
                   </label>
                 </li>
                 <li class="select-option__item select">
                   <label class="select__label label">
-                    <input class="visually-hidden" type="checkbox" name="milk">
+                    <input class="visually-hidden select__point" type="checkbox" name="milk">
                     <span class="select__mark select__mark--checkbox"></span>
                     <span class="select__name">молоко</span>
                   </label>
                 </li>
                 <li class="select-option__item select">
                   <label class="select__label label">
-                    <input class="visually-hidden" type="checkbox" name="vitamins">
+                    <input class="visually-hidden select__point" type="checkbox" name="vitamins">
                     <span class="select__mark select__mark--checkbox"></span>
                     <span class="select__name">витамины</span>
                   </label>
                 </li>
               </ul>
           </fieldset>
-          <button class="program-form__button button" type="submit">отправить заявку</button>
-          <p class="program-form__footnote">* — Обязательные поля</p>
+          <div class="program-form__button-wrap container--form">
+            <button class="program-form__button button" type="submit">отправить заявку</button>
+            <p class="program-form__footnote text">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
 
     <footer class="page__footer">
-      <section class="contacts container">
+      <section class="contacts container--form">
         <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
         <address class="contacts__address">
           <span>ул. Большая Конюшенная, д. 19/8</span>
@@ -169,7 +171,7 @@
           </picture>
         </div>
       </div> -->
-      <div class="footer-data container">
+      <div class="footer-data container--form">
         <a class="footer-data__logo footer-data__logo--catenergy" href="index.html">
           <span class="visually-hidden">Cat Energy.</span>
           <img src="images/cat-energy-footer.svg" width="128" height="24" alt="Cat Energy.">

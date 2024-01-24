@@ -1,36 +1,127 @@
 .card {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $card-line-color-grey;
 
   grid-template-areas:
   "A B"
   "A C"
   "D D";
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 37px 40px;
+    max-width: 323px;
+    background: linear-gradient(to top, $basic-grey 84%, $basic-grey 16%, $basic-white 16%);;
+    border: none;
+  }
+
+  &--option {
+    display: flex;
+    flex-direction: column;
+    padding-top: 13px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid $line-color-grey-2;
+
+    @media (min-width: $tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 26px 38px 28px;
+      max-width: 100%;
+      background: none;
+      border: 1px solid $line-color-grey-2;
+    }
+  }
 }
 
 .card__image {
+  margin: auto;
+
   grid-area: A;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 22px;
+    order: -1;
+  }
 }
 
 .card__title {
+  margin: 0;
+  padding-right: 40px;
+  padding-bottom: 14px;
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $special-dark-grey-2;
+
   grid-area: B;
+
+  @media (min-width: $tablet) {
+    padding: 0 57px 20px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &--show-more {
+    padding-bottom: 8px;
+
+    @media (min-width: $tablet) {
+      padding: 0 34px 23px;
+    }
+  }
+
+  &--option {
+    padding-bottom: 13px;
+    line-height: 16px;
+
+    @media (min-width: $tablet) {
+      padding: 0;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
 }
 
 .card__table {
+  padding-bottom: 17px;
   grid-area: C;
 }
 
 .card__button {
   grid-area: D;
+
+  &--show-more {
+    color: $special-dark-grey;
+    background-color: $basic-grey;
+
+    @media (min-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+  &--option {
+    @media (min-width: $tablet) {
+      width: 100%;
+    }
+  }
 }
 
 .card__text {
+  padding-bottom: 21px;
   font-size: 12px;
   line-height: 16px;
 
   @media (min-width: $tablet) {
+    padding-bottom: 82px;
     font-size: 16px;
     line-height: 18px;
+    text-align: center;
   }
 }

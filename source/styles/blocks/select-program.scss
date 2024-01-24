@@ -1,0 +1,28 @@
+.select-program {
+  padding-top: 22px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet) {
+    padding-top: 72px;
+    padding-bottom: 65px;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 126px;
+    padding-left: 80px;
+    grid-area: B;
+  }
+}
+
+.select-program__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @media (min-width: $tablet) {
+    padding: 23px 27px;
+    border: 1px solid $line-color-grey-3;
+  }
+}

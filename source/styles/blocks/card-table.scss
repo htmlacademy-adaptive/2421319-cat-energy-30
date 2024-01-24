@@ -2,13 +2,43 @@
   font-size: 12px;
   line-height: 16px;
 
-  &--option {
-    font-size: 14px;
-    line-height: 14px;
-  }
-
   @media (min-width: $tablet) {
+    margin-bottom: 32px;
     font-size: 16px;
     line-height: 20px;
+    border-collapse: collapse;
+  }
+
+  &--option {
+    padding-bottom: 15px;
+    font-size: 14px;
+    line-height: 14px;
+
+    @media (min-width: $tablet) {
+      margin-left: auto;
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 12px;
+    }
   }
 }
+
+.card-table__row td:nth-child(2) {
+  text-align: right;
+}
+
+.card-table__row td:nth-child(1) {
+
+  @media (min-width: $tablet) {
+    padding-right: 49px;
+  }
+}
+
+.card-table__content {
+
+  @media (min-width: $tablet) {
+    padding: 5px 0;
+    border-bottom: 1px solid $line-color-grey-2;
+  }
+}
+

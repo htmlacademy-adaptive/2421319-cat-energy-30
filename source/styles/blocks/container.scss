@@ -8,4 +8,14 @@
   @media (min-width: $desktop) {
     padding: 0 110px 0;
   }
+
+  &--form {
+    @media (min-width: $tablet) {
+      padding: 0 70px 0;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 0 110px 0;
+    }
+  }
 }
