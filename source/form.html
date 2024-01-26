@@ -14,40 +14,40 @@
 
   <body class="page__body">
     <header class="page-header container">
-      <a class="page-header__logo" href="index.html">
-        <picture>
-          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/cat-energy-icon-desktop.svg" width="70" height="59">
-          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-icon-tablet.svg" width="60" height="50">
-          <img src="images/cat-energy-icon-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
-        </picture>
-        <picture>
-          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-tablet-desktop.svg" width="101" height="18">
-          <img src="images/cat-energy-mobile.svg" width="101" height="18" alt="Cat Energy.">
-        </picture>
-      </a>
-      <nav class="page-navigation">
-        <button class="page-navigation__button" type="button">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/cat-energy-icon-desktop.svg" width="70" height="59">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-icon-tablet.svg" width="60" height="50">
+            <img src="images/cat-energy-icon-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+          </picture>
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-tablet-desktop.svg" width="101" height="18">
+            <img src="images/cat-energy-mobile.svg" width="101" height="18" alt="Cat Energy.">
+          </picture>
+        </a>
+      <nav class="page-navigation page-navigation--closed page-navigation--nojs">
+        <button class="page-header__button" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <ul class="page-navigation__list site-list list">
           <li class="site-list__item">
-            <a class="link" href="index.html">главная</a>
+            <a class="site-list__link link" href="index.html">главная</a>
           </li>
           <li class="site-list__item">
-            <a class="link" href="catalog.html">каталог продукции</a>
+            <a class="site-list__link link" href="catalog.html">каталог продукции</a>
           </li>
           <li class="site-list__item site-list__item--current">
-            <a class="link" href="form.html">подбор программы</a>
+            <a class="site-list__link link" href="form.html">подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page__main">
-      <section class="program-form">
-        <h1 class="program-form__title title container container--form">Подбор программы</h1>
+      <section class="program-form container container--form">
+        <h1 class="program-form__title title">Подбор программы</h1>
         <form class="program-form__form" action="https://echo.htmlacademy.ru/">
-          <fieldset class="program-form__about form-about form container container--form">
+          <fieldset class="program-form__about form-about form">
             <legend class="form-about__legend">Заполните анкету, и мы подберем <br>программу питания для вашего кота</legend>
             <ul class="form-about__list form-list list">
               <li class="form-list__item">
@@ -65,7 +65,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="program-form__select-program select-program form container container--form">
+          <fieldset class="program-form__select-program select-program form">
             <legend class="visually-hidden">Выберите программу.</legend>
             <ul class="select-program__list list">
               <li class="select-program__item select">
@@ -92,9 +92,9 @@
             </ul>
           </fieldset>
 
-          <fieldset class="program-form__contacts form-contacts form container container--form">
+          <fieldset class="program-form__contacts form-contacts form">
             <legend class="form-contacts__legend legend">Контактные данные (владельца кота)</legend>
-            <ul class="form-contacts__list form-list list">
+            <ul class="form-contacts__list form-list form-list--contacts  list">
               <li class="form-list__item form-list__item--email">
                 <label class="form-list__label label" for="email">E-mail:*</label>
                 <input class="form-list__input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
@@ -106,13 +106,13 @@
             </ul>
           </fieldset>
 
-          <fieldset class="program-form__comment form-comment form container container--form">
+          <fieldset class="program-form__comment form-comment form">
             <legend class="form-comment__legend legend">Комментарий</legend>
             <label class="visually-hidden" for="comment">Расскажите обо всех повАдках кота.</label>
             <textarea class="form-comment__input" placeholder="Расскажите обо всех повАдках кота" name="comment" id="comment" cols="30" rows="5"></textarea>
           </fieldset>
 
-          <fieldset class="program-form__select-option select-option form container container--form">
+          <fieldset class="program-form__select-option select-option form">
             <legend class="select-option__legend legend">Дополнительно</legend>
               <ul class="select-option__list list">
                 <li class="select-option__item select">
@@ -145,7 +145,7 @@
                 </li>
               </ul>
           </fieldset>
-          <div class="program-form__button-wrap container container--form">
+          <div class="program-form__button-wrap">
             <button class="program-form__button button" type="submit">отправить заявку</button>
             <p class="program-form__footnote text">* — Обязательные поля</p>
           </div>

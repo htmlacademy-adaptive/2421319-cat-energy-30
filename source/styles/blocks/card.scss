@@ -1,10 +1,10 @@
 .card {
+  position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
   padding-top: 20px;
   padding-bottom: 25px;
-  border-bottom: 1px solid $card-line-color-grey;
 
   grid-template-areas:
   "A B"
@@ -24,6 +24,21 @@
     max-width: 245px;
   }
 
+  @media (max-width: $mobile-only) {
+
+    &:after {
+      content: "";
+      position: absolute;
+      background: $card-line-color-grey;
+      height: 1px;
+      width: 100vw;
+      right: 0;
+      bottom: 0;
+      box-shadow: 100vw 0 0 $card-line-color-grey;
+      z-index: -1;
+    }
+  }
+
   &--option {
     display: flex;
     flex-direction: column;
@@ -38,6 +53,53 @@
       max-width: 100%;
       background: none;
       border: 1px solid $line-color-grey-2;
+      border-bottom: none;
+
+      &:last-child {
+        border-bottom: 1px solid $line-color-grey-2;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      padding: 17.5px 0 17.5px;
+      border-right: none;
+      border-left: none;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &--show-more {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+
+    &:before {
+      display: block;
+      margin-bottom: 23px;
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(#d3d3d3,#d3d3d3), linear-gradient(#d3d3d3,#d3d3d3);
+      background-position: center;
+      background-size: 100% 2px, 2px 100%;
+      background-repeat: no-repeat;
+      content: "";
+
+      @media (min-width: $tablet) {
+        margin-bottom: 50px;
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      margin-top: 82px;
+      padding-top: 50px;
+      background: none;
+      border: 1px solid $basic-grey;
     }
   }
 }
@@ -78,7 +140,7 @@
   }
 
   &--show-more {
-    padding-bottom: 8px;
+    padding: 0 0 8px;
 
     @media (min-width: $tablet) {
       padding: 0 34px 23px;
@@ -97,26 +159,20 @@
   }
 }
 
-.card__table {
-  padding-bottom: 17px;
-  grid-area: C;
-}
-
 .card__button {
+  width: 100%;
+
   grid-area: D;
 
   &--show-more {
     color: $special-dark-grey;
     background-color: $basic-grey;
-
-    @media (min-width: $tablet) {
-      width: 100%;
-    }
   }
 
   &--option {
-    @media (min-width: $tablet) {
-      width: 100%;
+
+    @media (min-width: $desktop) {
+      width: 244px;
     }
   }
 }

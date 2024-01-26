@@ -1,0 +1,14 @@
+.page-navigation--closed .site-list__item {
+
+  @media (max-width: $mobile-only) {
+    display: none;
+  }
+}
+
+.page-navigation--nojs .page-header__button {
+  display: none;
+}
+
+.page-navigation--nojs .site-list__item {
+  display: block;
+}

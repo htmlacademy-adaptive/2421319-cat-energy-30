@@ -1,25 +1,26 @@
 .promo {
   padding-top: 35px;
   padding-bottom: 35px;
-
-  @media (min-width: $tablet) {
-    padding: 75px 0;
-  }
-}
-
-.promo__text {
-  padding: 59px 60px 43px;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  color: $basic-white;
   background-image: linear-gradient(rgba(104,183,56,.851),rgba(104,183,56,.851)), url("../../images/promo-background@1x.jpg");
   background-size: cover;
   background-position: center;
 
+  @media (min-width: $tablet) {
+    padding: 75px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    width: 245px;
+  }
+}
+
+.promo__img {
+
   &:before {
     display: block;
     margin: auto;
+    margin-top: 56px;
     margin-bottom: 48px;
     width: 78px;
     height: 80px;
@@ -27,9 +28,13 @@
     background-repeat: no-repeat;
     background-position: center;
     content: "";
-
-    @media (min-width: $tablet) {
-      margin: 57px 77px;
-    }
   }
+}
+
+.promo__text {
+  padding: 0 42px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $basic-white;
 }

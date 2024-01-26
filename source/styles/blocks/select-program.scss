@@ -1,7 +1,23 @@
 .select-program {
+  position: relative;
+  margin-bottom: 20px;
   padding-top: 22px;
   padding-bottom: 19px;
-  border-bottom: 1px solid #d9d9d9;
+
+  @media (max-width: $mobile-only) {
+
+    &:after {
+      content: "";
+      position: absolute;
+      background: $card-line-color-grey;
+      height: 1px;
+      width: 100vw;
+      right: 0;
+      bottom: 0;
+      box-shadow: 100vw 0 0 $card-line-color-grey;
+      z-index: -1;
+    }
+  }
 
   @media (min-width: $tablet) {
     padding-top: 72px;

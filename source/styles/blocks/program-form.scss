@@ -1,7 +1,6 @@
 .program-form {
   padding-top: 27px;
   padding-bottom: 32px;
-  border-top: 1px solid $line-color-grey;
 
   @media (min-width: $tablet) {
     padding-top: 67px;
@@ -52,6 +51,11 @@
 }
 
 .program-form__button {
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    width: 284px;
+  }
 
   @media (min-width: $desktop) {
     width: 570px;

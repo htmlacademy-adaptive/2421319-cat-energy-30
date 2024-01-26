@@ -1,10 +1,20 @@
 .catalog__title {
+  position: relative;
   padding-top: 27px;
   padding-bottom: 41px;
-  border-top: 1px solid $line-color-grey;
-  border-bottom: 1px solid $card-line-color-grey;
 
-  @media (min-width: $tablet) {
-    border: none;
+  @media (max-width: $mobile-only) {
+
+    &:after {
+      content: "";
+      position: absolute;
+      background: $card-line-color-grey;
+      height: 1px;
+      width: 100vw;
+      right: 0;
+      bottom: 0;
+      box-shadow: 100vw 0 0 $card-line-color-grey;
+      z-index: -1;
+    }
   }
 }

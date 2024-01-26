@@ -1,10 +1,47 @@
 .option-catalog__title {
+  position: relative;
   padding-top: 25px;
   padding-bottom: 36px;
-  border-bottom: 1px solid $line-color-grey-2;
+  max-width: fit-content;
+  background-color: $basic-white;
+  box-shadow: -20px 0 0 $basic-white, 20px 0 0 $basic-white;
 
+  @media (max-width: $mobile-only) {
 
-  @media (min-width: $tablet) {
-    border: none;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      height: 1px;
+      width: 280px;
+      background: $line-color-grey-2;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 80px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: -1;
+    height: 2px;
+    width: 100vw;
+    background: $basic-green;
+    box-shadow: 100vw 0 0 $basic-green;
+  }
+}
+
+.option-catalog__wrap {
+
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 87px;
   }
 }

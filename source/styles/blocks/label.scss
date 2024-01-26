@@ -3,6 +3,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  text-wrap: nowrap;
 
   @media (min-width: $tablet) {
     font-size: 20px;

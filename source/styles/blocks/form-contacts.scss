@@ -12,23 +12,9 @@
   }
 }
 
-.form-contacts__list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-top: 35px;
-
-  @media (min-width: $tablet) {
-    gap: 20px;
-    padding-top: 76px;
-  }
-
-  @media (min-width: $desktop) {
-    flex-direction: row;
-    gap: 80px;
-  }
-}
-
 .form-contacts__legend {
-  display: contents;
+
+  @media (max-width: $mobile-only) {
+    width: 187px;
+  }
 }

@@ -9,13 +9,13 @@
 .select-option__list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 13px;
 
   @media (min-width: $tablet) {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 32px;
+    column-gap: 112px;
+    row-gap: 36px;
     padding-bottom: 52px;
   }
 }
@@ -35,6 +35,6 @@
   }
 
   @media (min-width: $desktop) {
-    width: auto;
+    width: 221px;
   }
 }

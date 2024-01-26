@@ -14,40 +14,44 @@
 
   <body class="page__body">
     <header class="page-header container">
-      <a class="page-header__logo" href="index.html">
-        <picture>
-          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/cat-energy-icon-desktop.svg" width="70" height="59">
-          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-icon-tablet.svg" width="60" height="50">
-          <img src="images/cat-energy-icon-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
-        </picture>
-        <picture>
-          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-tablet-desktop.svg" width="101" height="18">
-          <img src="images/cat-energy-mobile.svg" width="101" height="18" alt="Cat Energy.">
-        </picture>
-      </a>
-      <nav class="page-navigation">
-        <button class="page-navigation__button" type="button">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/cat-energy-icon-desktop.svg" width="70" height="59">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-icon-tablet.svg" width="60" height="50">
+            <img src="images/cat-energy-icon-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+          </picture>
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/cat-energy-tablet-desktop.svg" width="101" height="18">
+            <img src="images/cat-energy-mobile.svg" width="101" height="18" alt="Cat Energy.">
+          </picture>
+        </a>
+      <nav class="page-navigation page-navigation--closed page-navigation--nojs">
+        <button class="page-header__button" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
         <ul class="page-navigation__list site-list list">
           <li class="site-list__item site-list__item--current">
-            <a class="link" href="index.html">главная</a>
+            <a class="site-list__link link" href="index.html">главная</a>
           </li>
           <li class="site-list__item">
-            <a class="link" href="catalog.html">каталог продукции</a>
+            <a class="site-list__link link" href="catalog.html">каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a class="link" href="form.html">подбор программы</a>
+            <a class="site-list__link link" href="form.html">подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page__main">
-      <section class="hero container">
-          <h1 class="hero__title title">Функциональное питание для котов</h1>
-          <p class="hero__slogan">Занялся собой? Займись котом!</p>
-          <a class="hero__button button" href="form.html">подобрать программу</a>
+      <section class="hero">
+        <div class="hero__wrap">
+          <div class="hero__text">
+            <h1 class="hero__title title">Функциональное <br>питание для котов</h1>
+            <p class="hero__slogan text">Занялся собой? Займись котом!</p>
+          </div>
+            <a class="hero__button button" href="form.html">подобрать программу</a>
+        </div>
       </section>
 
       <section class="programs container">
@@ -85,40 +89,44 @@
       </section>
 
       <section class="results">
-        <h2 class="results__title title container">Живой пример</h2>
-        <div class="results__container container">
-          <p class="results__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <ul class="results__list results-list list">
-            <li class="results-list__item">
-              <p class="results-list__label text">5 КГ</p>
-              <p class="results-list__text text">снижение веса</p>
-            </li>
-            <li class="results-list__item">
-              <p class="results-list__label text">60 ДНЕЙ</p>
-              <p class="results-list__text text">затрачено времени</p>
-            </li>
-          </ul>
-          <div class="results__price results-price">
-            <span class="results-price__label">Затраты на питание:</span>
-            <span class="results-price__text text">15 000 РУБ.</span>
+        <div class="results__wrap container">
+          <h2 class="results__title title">Живой пример</h2>
+          <div class="results__container">
+            <p class="results__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <ul class="results__list results-list list">
+              <li class="results-list__item">
+                <p class="results-list__label text">5 КГ</p>
+                <p class="results-list__text text">снижение веса</p>
+              </li>
+              <li class="results-list__item">
+                <p class="results-list__label text">60 ДНЕЙ</p>
+                <p class="results-list__text text">затрачено времени</p>
+              </li>
+            </ul>
+            <div class="results__price results-price">
+              <span class="results-price__label">Затраты на питание:</span>
+              <span class="results-price__text text">15 000 РУБ.</span>
+            </div>
           </div>
-        </div>
-        <div class="results__slider slider container">
-          <div class="slider__before">
-            <picture>
-              <source type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" width="560" height="512">
-              <img class="slider__image slider__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстенький кот до смены питания.">
-            </picture>
+          <div class="results__slider slider">
+            <div class="slider__image slider__image--before">
+              <picture>
+                <source type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" width="560" height="512">
+                <img src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстенький кот до смены питания.">
+              </picture>
+            </div>
+            <div class="slider__image slider__image--after">
+              <picture>
+                <source type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" width="560" height="512">
+                <img src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Стройный кот на функциональном питании Cat Energy Slim.">
+              </picture>
+            </div>
+            <div class="slider__slider">
+              <button class="slider__button" type="button">
+                <span class="visually-hidden">До/После</span>
+              </button>
+            </div>
           </div>
-          <div class="slider__after">
-            <picture>
-              <source type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" width="560" height="512">
-              <img class="slider__image slider__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Стройный кот на функциональном питании Cat Energy Slim.">
-            </picture>
-          </div>
-          <button class="slider__button" type="button">
-            <span class="visually-hidden">До/После</span>
-          </button>
         </div>
       </section>
     </main>
@@ -169,6 +177,5 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

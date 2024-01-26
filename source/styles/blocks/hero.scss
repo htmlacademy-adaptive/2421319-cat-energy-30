@@ -1,15 +1,53 @@
 .hero {
-  position: relative;
-  z-index: -2;
-  margin-bottom: 150px;
-  text-align: center;
-  color: $basic-white;
-  background-image: url("../../images/hero@1x.png"), linear-gradient(rgba(104,183,56,.851),rgba(104,183,56,.851)),url("../../images/hero-background@1x.jpg");
-  background-position: bottom,top,top;
-  background-repeat: no-repeat,repeat,no-repeat;
-  background-size: auto, cover;
 
   @media (min-width: $tablet) {
+    margin: auto;
+    width: 708px;
+    min-height: 875px;
+    background-image: url("../../images/hero-tablet@1x.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.hero__wrap {
+
+  @media (min-width: $tablet) {
+    padding: 65px 90px;
+  }
+}
+
+.hero__text {
+
+  @media (max-width: $mobile-only) {
+    position: relative;
+    padding: 0 25px;
+    text-align: center;
+    color: $basic-white;
+    background-image: linear-gradient(rgba(104,183,56,.851),rgba(104,183,56,.851)),
+                      url("../../images/hero-background@1x.jpg"),
+                      linear-gradient(to right, rgb(53, 94, 28),rgb(32, 59, 16));
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:after {
+      position: absolute;
+      width: 280px;
+      height: 270px;
+      transform: translateX(-50%) translateY(-50%);
+      background-image: url("../../images/hero@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      content: "";
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin: auto;
+    padding: 65px 90px 50px;
+    width: 1220px;
     color: $basic-black;
   }
 }
@@ -20,15 +58,34 @@
 }
 
 .hero__slogan {
-  margin: 0;
-  padding-bottom: 164px;
-  font-family: $secondary-font;
-  font-size: 14px;
-  line-height: 14px;
   text-transform: uppercase;
+  font-family: $secondary-font;
+
+  @media (max-width: $mobile-only) {
+    margin: 0;
+    padding-bottom: 164px;
+    font-size: 14px;
+    line-height: normal;
+  }
 
   @media (min-width: $tablet) {
+    padding-top: 15px;
+    padding-bottom: 52px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: normal;
+  }
+}
+
+.hero__button {
+
+  @media (max-width: $mobile-only) {
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 20px;
+    width: 280px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 244px;
   }
 }

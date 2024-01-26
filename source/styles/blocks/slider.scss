@@ -1,26 +1,78 @@
 .slider {
+  position: relative;
   display: flex;
-  width: 100%;
-  margin: auto;
+  margin: 0 auto;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: $tablet) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
+  }
 }
 
-.slider__before {
-  position: relative;
-  overflow: hidden;
-}
-
-.slider__after {
-  position: relative;
-  overflow: hidden;
-}
 
 .slider__image {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 
-  &--before {
+  img {
+    display: block;
+    width: 280px;
+    height: 256px;
+    max-width: initial;
+    user-select: none;
+    pointer-events: none;
 
+    @media (min-width: $tablet) {
+      width: 560px;
+      height: 512px;
+    }
   }
 
   &--after {
-    transform: translate(-50%,0);
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.slider__slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  width: 4px;
+  height: 100%;
+  background-color: $special-grey-2;
+  border-radius: 2px;
+}
+
+.slider__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $basic-white;
+  background: url(../../images/icons/thumb.svg);
+  border: 2px solid $special-grey-2;
+
+  @media (hover: hover) {
+    cursor: pointer;
   }
 }

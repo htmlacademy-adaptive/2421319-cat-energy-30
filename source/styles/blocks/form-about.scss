@@ -1,6 +1,21 @@
 .form-about {
+  position: relative;
   padding-bottom: 24px;
-  border-bottom: 1px solid #d9d9d9;
+
+  @media (max-width: $mobile-only) {
+
+    &:after {
+      content: "";
+      position: absolute;
+      background: $card-line-color-grey;
+      height: 1px;
+      width: 100vw;
+      right: 0;
+      bottom: 0;
+      box-shadow: 100vw 0 0 $card-line-color-grey;
+      z-index: -1;
+    }
+  }
 
   @media (min-width: $tablet) {
     border: none;
@@ -14,20 +29,9 @@
 }
 
 .form-about__legend {
+
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-.form-about__list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-top: 39px;
-
-  @media (min-width: $tablet) {
-    padding-top: 66px;
-    gap: 20px;
   }
 }
