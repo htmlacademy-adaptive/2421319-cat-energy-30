@@ -5,6 +5,7 @@
     <title>CAT ENERGY</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1cc9796c-16b2-4656-b3d3-702a2b839f18&lang=ru_RU" type="text/javascript"></script>
     <script src="scripts/index.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
@@ -242,7 +243,7 @@
           <li class="card-list__item card card--show-more">
             <h3 class="card__title card__title--show-more">Показать еще 100500 товаров</h3>
             <p class="card__text text">На самом деле вкусов гораздо больше!</p>
-            <a class="card__button card__button--show-more button" href="#">показать все</a>
+            <a class="card__button button button--show-more" href="#">показать все</a>
           </li>
         </ul>
       </section>
@@ -305,7 +306,7 @@
           </ul>
           <div class="promo">
             <span class="promo__img"></span>
-            <p class="promo__text text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="promo__text text">Закажите все <br>и получите чехол для кота в подарок!</p>
           </div>
         </div>
       </section>
@@ -313,21 +314,18 @@
 
     <footer class="page__footer">
       <section class="contacts container">
-        <h2 class="contacts__title title">приглашаем к сотрудничеству дилеров!</h2>
+        <h2 class="contacts__title title">приглашаем <br>к сотрудничеству <br>дилеров!</h2>
         <address class="contacts__address">
           <span>ул. Большая Конюшенная, д. 19/8</span>
           <span>Санкт-Петербург</span>
         </address>
       </section>
-      <div class="map">
-        <div class="map__wrapper">
-          <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.762473087486!2d30.309979649714336!3d59.937275742389886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1701317990021!5m2!1sru!2sru" width="100%" height="362" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <picture>
-            <source type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="400">
-            <source type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="400">
-            <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Мы на карте.">
-          </picture>
-        </div>
+      <div id="map" class="map">
+        <picture>
+          <source type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="400">
+          <source type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="400">
+          <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Мы на карте.">
+        </picture>
       </div>
       <div class="footer-data container">
         <a class="footer-data__logo footer-data__logo--catenergy" href="index.html">
@@ -352,11 +350,10 @@
           </li>
         </ul>
         <div class="footer-data__logo footer-data__logo--htmlacademy">
-          <a class="footer-data__text text link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="footer-data__text link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="footer-data__icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

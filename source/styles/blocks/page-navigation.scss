@@ -1,3 +1,17 @@
+.page-navigation {
+
+  @media (max-width: $mobile-only) {
+    position: absolute;
+    background-color: $basic-white;
+    z-index: 99;
+    width: 100%;
+  }
+
+  @media (min-width: $tablet) {
+    margin-left: auto;
+  }
+}
+
 .page-navigation--closed .site-list__item {
 
   @media (max-width: $mobile-only) {

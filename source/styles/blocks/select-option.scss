@@ -1,7 +1,8 @@
 .select-option {
-  padding-bottom: 34px;
+  padding-bottom: 32px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
+    padding-bottom: 39px;
     grid-area: E;
   }
 }
@@ -14,9 +15,13 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     flex-wrap: wrap;
-    column-gap: 112px;
-    row-gap: 36px;
-    padding-bottom: 52px;
+    column-gap: 80px;
+    row-gap: 30px;
+    padding-bottom: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 85px;
   }
 }
 
@@ -31,10 +36,10 @@
 .select-option__item {
 
   @media (min-width: $tablet) {
-    width: 45%;
+    width: 265px;
   }
 
   @media (min-width: $desktop) {
-    width: 221px;
+    width: 240px;
   }
 }

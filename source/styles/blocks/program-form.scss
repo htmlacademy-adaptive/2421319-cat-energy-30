@@ -3,13 +3,13 @@
   padding-bottom: 32px;
 
   @media (min-width: $tablet) {
-    padding-top: 67px;
+    padding-top: 55px;
     padding-bottom: 60px;
     border: none;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 74px;
+    padding-top: 65px;
     padding-bottom: 79px;
   }
 }
@@ -25,8 +25,9 @@
 
   @media (min-width: $desktop) {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 570px 570px;
     grid-template-rows: auto auto auto auto auto;
+    grid-gap: 0 79px;
     padding-top: 55px;
 
     grid-template-areas:
@@ -46,6 +47,7 @@
   }
 
   @media (min-width: $desktop) {
+    gap: 80px;
     grid-area: F;
   }
 }

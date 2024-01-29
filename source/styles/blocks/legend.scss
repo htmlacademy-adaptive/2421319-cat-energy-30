@@ -18,10 +18,15 @@
     top: 15px;
     box-shadow: 100vw 0 0 $basic-green;
     z-index: -1;
+
+    @media (min-width: $tablet) {
+      top: 22px;
+    }
   }
 
   @media (min-width: $tablet) {
     font-size: 36px;
     line-height: 36px;
+    box-shadow: -40px 0 0 $basic-white, 40px 0 0 $basic-white;
   }
 }

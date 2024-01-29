@@ -20,8 +20,14 @@
     }
   }
 
+  @media (min-width: $tablet) {
+    padding: 25px 40px 80px;
+    box-shadow: 0 0 0 $basic-white, 0 0 0 $basic-white;
+  }
+
   @media (min-width: $desktop) {
-    padding-bottom: 80px;
+    padding: 25px 0 80px;
+    box-shadow: 40px 0 0 $basic-white, -40px 0 0 $basic-white;
   }
 
   &:after {
@@ -34,14 +40,22 @@
     width: 100vw;
     background: $basic-green;
     box-shadow: 100vw 0 0 $basic-green;
+
+    @media (min-width: $tablet) {
+      top: 47px;
+    }
   }
 }
 
 .option-catalog__wrap {
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 75px;
+  }
 
   @media (min-width: $desktop) {
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 87px;
+    padding-bottom: 88px;
   }
 }

@@ -3,18 +3,46 @@
   @media (min-width: $tablet) {
     margin: auto;
     width: 708px;
-    min-height: 875px;
+    min-height: 864px;
     background-image: url("../../images/hero-tablet@1x.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    z-index: -10;
+    margin-top: -130px;
+    margin-bottom: 82px;
+    width: 100%;
+    min-height: 694px;
+    background-image: linear-gradient(rgba(104,183,56,.851),rgba(104,183,56,.851)),
+                      url("../../images/hero-background-desktop@1x.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+    &:after {
+      position: absolute;
+      top: 60px;
+      right: 162px;
+      width: 50%;
+      height: 100%;
+      background-image: url("../../images/hero-desktop@1x.png");
+      background-size: 552px 499px;
+      background-repeat: no-repeat;
+      background-position: left;
+      content: "";
+    }
+  }
 }
+
 
 .hero__wrap {
 
   @media (min-width: $tablet) {
-    padding: 65px 90px;
+    padding: 28px 90px;
   }
 }
 
@@ -36,7 +64,7 @@
       position: absolute;
       width: 280px;
       height: 270px;
-      transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-51%);
       background-image: url("../../images/hero@1x.png");
       background-repeat: no-repeat;
       background-position: center;
@@ -54,7 +82,7 @@
 
 .hero__title {
   color: inherit;
-  padding: 27px 0 25px;
+  padding: 26px 0 21px;
 }
 
 .hero__slogan {
@@ -70,7 +98,7 @@
 
   @media (min-width: $tablet) {
     padding-top: 15px;
-    padding-bottom: 52px;
+    padding-bottom: 46px;
     font-size: 20px;
     line-height: normal;
   }
@@ -80,12 +108,14 @@
 
   @media (max-width: $mobile-only) {
     margin: auto;
-    margin-top: 140px;
+    margin-top: 136px;
     margin-bottom: 20px;
+    padding-top: 10px;
     width: 280px;
   }
 
   @media (min-width: $tablet) {
+    padding: 14px;
     width: 244px;
   }
 }

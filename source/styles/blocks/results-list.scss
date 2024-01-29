@@ -2,6 +2,10 @@
   display: flex;
   justify-content: center;
   gap: 32px;
+
+  @media (min-width: $tablet) {
+    gap: 43px;
+  }
 }
 
 .results-list__item {
@@ -42,11 +46,11 @@
 
   @media (min-width: $tablet) {
     position: inherit;
-    top: -10px;
+    top: -13px;
     left: auto;
     display: inline-block;
     width: auto;
-    padding: 0 5px;
+    padding: 0 8px;
     font-size: 14px;
     line-height: 14px;
     background-color: $basic-white;

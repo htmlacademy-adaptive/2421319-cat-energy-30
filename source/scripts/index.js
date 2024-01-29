@@ -1,14 +1,97 @@
-let navPage = document.querySelector('.page-navigation');
-let navButton = document.querySelector('.page-header__button');
+let navMain = document.querySelector('.page-navigation');
+let navToggle = document.querySelector('.page-header__button');
 
-navPage.classList.remove('page-navigation--nojs');
+navMain.classList.remove('page-navigation--nojs');
 
-navButton.addEventListener('click', function () {
-  if (navPage.classList.contains('page-navigation--closed')) {
-    navPage.classList.remove('page-navigation--closed');
-    navPage.classList.add('page-navigation--opened');
+navToggle.addEventListener('click', function () {
+  if (navMain.classList.contains('page-navigation--closed')) {
+    navMain.classList.remove('page-navigation--closed');
+    navMain.classList.add('page-navigation--opened');
   } else {
-    navPage.classList.add('page-navigation--closed');
-    navPage.classList.remove('page-navigation--opened');
+    navMain.classList.add('page-navigation--closed');
+    navMain.classList.remove('page-navigation--opened');
   }
 });
+
+
+const slider = document.querySelector(".slider__slider");
+const sliderWrapper = document.querySelector(".slider");
+const sliderButton = document.querySelector(".slider__button");
+const sliderBefore = document.querySelector(".slider__image--before");
+const sliderAfter = document.querySelector(".slider__image--after");
+
+let start = false;
+let position;
+let translateX = 0;
+
+if (sliderButton && slider) {
+  sliderButton.addEventListener("pointerdown", (e) => {
+    start = true;
+  });
+
+  sliderWrapper.addEventListener("pointermove", (e) => {
+    e.preventDefault();
+    if (start) {
+      if (position) {
+        const delta = position - e.clientX;
+        slideIt(delta);
+      }
+
+      position = e.clientX;
+    }
+  });
+
+  document.addEventListener("pointerup", (e) => {
+    start = false;
+  });
+}
+
+const slideIt = (x) => {
+  const sliderBeforeWidth = Math.round(
+    sliderBefore.getBoundingClientRect().width - x
+  );
+  const sliderAfterWidth =
+    sliderWrapper.getBoundingClientRect().width - sliderBeforeWidth;
+
+  sliderBefore.style.width = sliderBeforeWidth + "px";
+  sliderAfter.style.width = sliderAfterWidth + "px";
+
+  let sliderTranslate = translateX - x;
+
+  if (sliderTranslate > sliderWrapper.getBoundingClientRect().width / 2) {
+    sliderTranslate = sliderWrapper.getBoundingClientRect().width / 2;
+  }
+
+  if (
+    sliderTranslate <
+    (sliderWrapper.getBoundingClientRect().width / 2) * -1
+  ) {
+    sliderTranslate = (sliderWrapper.getBoundingClientRect().width / 2) * -1;
+  }
+  slider.style.transform = `translateX(${sliderTranslate}px)`;
+  translateX -= x;
+};
+
+ymaps.ready(init);
+function init(){
+
+  var myMap = new ymaps.Map("map", {
+    center: [59.93863106417265,30.323036499999905],
+    zoom: 17,
+    controls: ['zoomControl'],
+    behaviors: ['drag']
+}, {
+    searchControlProvider: 'yandex#search'
+}),
+myPlacemark = new ymaps.Placemark([59.93863106417265,30.323036499999905], {
+    hintContent: "ул. Большая Конюшенная, д. 19/8"
+},
+{
+  iconLayout: 'default#image',
+  iconImageHref: '/images/map-pin@1x.png',
+  iconImageSize: [57, 53],
+  iconImageOffset: [-28, -53]
+});
+
+myMap.geoObjects.add(myPlacemark);
+}

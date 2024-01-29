@@ -7,7 +7,8 @@
     padding-bottom: 65px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
+    padding-bottom: 70px;
     grid-area: C;
   }
 }

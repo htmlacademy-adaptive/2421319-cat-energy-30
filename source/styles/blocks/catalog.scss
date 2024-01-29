@@ -1,6 +1,19 @@
+.catalog {
+  padding-top: 27px;
+
+  @media (min-width: $tablet) {
+    padding-top: 57px;
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 50px;
+    padding-top: 65px;
+  }
+}
+
 .catalog__title {
   position: relative;
-  padding-top: 27px;
   padding-bottom: 41px;
 
   @media (max-width: $mobile-only) {
@@ -16,5 +29,13 @@
       box-shadow: 100vw 0 0 $card-line-color-grey;
       z-index: -1;
     }
+  }
+
+  @media (min-width: $tablet) {
+    padding-bottom: 82px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 73px;
   }
 }

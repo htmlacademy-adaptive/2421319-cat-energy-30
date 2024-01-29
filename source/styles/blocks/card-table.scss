@@ -1,25 +1,29 @@
 .card-table {
-  padding-bottom: 17px;
+  padding-bottom: 18px;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 13px;
 
   grid-area: C;
 
   @media (min-width: $tablet) {
-    margin-bottom: 32px;
+    margin-bottom: 29px;
     font-size: 16px;
     line-height: 20px;
     border-collapse: collapse;
   }
 
+  @media (min-width: $desktop) {
+    margin-bottom: 32px;
+    line-height: 22px;
+  }
+
   &--option {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     font-size: 14px;
     line-height: 14px;
 
     @media (min-width: $tablet) {
-      margin-left: auto;
-      margin-bottom: 24px;
+      margin: 2px 0 20px auto;
       font-size: 16px;
       line-height: 12px;
     }
@@ -29,6 +33,7 @@
       margin-left: auto;
       margin-right: 40px;
       width: 285px;
+      line-height: 32px;
     }
   }
 }
@@ -40,7 +45,7 @@
 .card-table__row--option td:nth-child(1) {
 
   @media (min-width: $tablet) {
-    padding-right: 49px;
+    padding-right: 55px;
   }
 }
 

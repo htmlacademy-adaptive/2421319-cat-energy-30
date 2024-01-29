@@ -1,11 +1,11 @@
 .results {
   position: relative;
-  padding-top: 25px;
+  padding-top: 6px;
   padding-bottom: 40px;
   background-color: $grey;
 
   @media (min-width: $tablet) {
-    padding-top: 45px;
+    padding-top: 46px;
     padding-bottom: 101px;
     background: none;
 
@@ -13,7 +13,7 @@
       content: "";
       position: absolute;
       background: $grey;
-      height: 485px;
+      height: 461px;
       width: 100vw;
       right: 0;
       bottom: 0;
@@ -42,11 +42,12 @@
 }
 
 .results__container {
+  padding-bottom: 18px;
 
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 99px;
+    padding-bottom: 83px;
   }
 
   @media (min-width: $desktop) {
@@ -56,10 +57,10 @@
 }
 
 .results__title {
-  padding-bottom: 20px;
+  padding-bottom: 42px;
 
   @media (min-width: $tablet) {
-    padding-bottom: 30px;
+    padding-bottom: 61px;
   }
 
   @media (min-width: $desktop) {
@@ -70,10 +71,10 @@
 }
 
 .results__text {
-  padding: 20px 0;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet) {
-    padding: 30px 0 55px;
+    padding-bottom: 53px;
     font-size: 16px;
     line-height: 24px;
   }

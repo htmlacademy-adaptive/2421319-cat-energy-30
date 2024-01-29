@@ -6,21 +6,37 @@
 
   @media (min-width: $tablet) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    padding-top: 15px;
   }
 
+  @media (min-width: $desktop) {
+    padding-top: 47px;
+  }
+
+}
+
+.page-header__wrap {
+
+  @media (min-width: $tablet) {
+    display: flex;
+    margin: auto;
+    width: 705px;
+  }
 }
 
 .page-header__logo {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 13px 0 15px;
-  width: 192px;
+
 
   @media (max-width: $mobile-only) {
+    gap: 56px;
+    align-items: center;
+    margin: auto;
+    padding: 13px 0 15px;
+    width: 280px;
 
     &:after {
       content: "";
@@ -36,7 +52,16 @@
   }
 
   @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
     width: 174px;
+  }
+}
+
+.page-header__logo img {
+
+  @media (min-width: $tablet) {
+    height: 100%;
   }
 }
 
@@ -46,10 +71,8 @@
   @media (max-width: $mobile-only) {
     position: absolute;
     display: block;
-    top: 17px;
-    right: 0;
-    display: block;
-    margin-left: auto;
+    top: -50px;
+    right: 40px;
     width: 30px;
     height: 30px;
     border: none;

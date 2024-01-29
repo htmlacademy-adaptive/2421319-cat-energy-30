@@ -1,8 +1,14 @@
 .site-list {
 
-
   @media (min-width: $tablet) {
     display: flex;
+    gap: 34px;
+  }
+
+  &--index {
+    @media (min-width: $desktop) {
+      color: $basic-white;
+    }
   }
 }
 
@@ -31,6 +37,7 @@
   }
 
   @media (min-width: $tablet) {
+    padding: 22px 0px 24px;
     font-size: 18px;
     line-height: 24px;
   }
@@ -38,7 +45,6 @@
   @media (min-width: $desktop) {
     font-size: 20px;
     line-height: normal;
-    color: $basic-white;
   }
 }
 
@@ -49,9 +55,47 @@
   }
 
   @media (min-width: $desktop) {
-    border-bottom: 2px solid $basic-white;
+
+    &:hover {
+      color: rgb(0, 0, 0, 0.6);
+    }
+
+    &:active {
+      color: rgb(0, 0, 0, 0.3);
+    }
   }
 }
 
+.site-list__link {
+
+  @media (min-width: $tablet) {
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: $desktop) {
+
+    &:hover {
+      color: rgb(0, 0, 0, 0.6);
+    }
+
+    &:active {
+      color: rgb(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.site-list--index  .site-list__link {
+
+  @media (min-width: $desktop) {
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgb(255, 255, 255, 0.3);
+    }
+  }
+}
 
 

@@ -1,11 +1,12 @@
 .form-comment {
-  padding-bottom: 23px;
+  padding-bottom: 20px;
 
   @media (min-width: $tablet) {
-    padding-bottom: 65px;
+    padding-bottom: 62px;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
+    padding-bottom: 69px;
     grid-area: D;
   }
 }
@@ -16,12 +17,17 @@
   @media (min-width: $tablet) {
     padding-bottom: 87px;
   }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 77px;
+  }
 }
 
 .form-comment__input {
   font-family: $secondary-font;
   padding: 14px 10px;
   width: 100%;
+  min-height: 150px;
   font-size: 16px;
   line-height: 18px;
   text-align: center;
@@ -31,6 +37,9 @@
 
   @media (min-width: $tablet) {
     padding: 11px 20px;
+    min-height: 175px;
+    font-size: 20px;
+    line-height: 30px;
     text-align: left;
   }
 }

@@ -1,8 +1,17 @@
 .advantages {
   padding-top: 20px;
   padding-bottom: 70px;
+
+  @media (min-width: $tablet) {
+    padding-top: 42px;
+    padding-bottom: 102px;
+  }
 }
 
 .advantages__title {
-  padding-bottom: 72px;
+  padding-bottom: 42px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 72px;
+  }
 }

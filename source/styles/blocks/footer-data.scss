@@ -1,14 +1,14 @@
 .footer-data {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 41px;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 42px;
   padding-bottom: 40px;
 
   @media (min-width: $tablet) {
     flex-direction: row;
-    justify-content: space-between;
+    gap: 0;
   }
 }
 
@@ -48,6 +48,7 @@
     @media (min-width: $tablet) {
       width: auto;
       gap: 23px;
+      margin-left: 123px;
       padding: 55px 0;
     }
   }
@@ -55,6 +56,7 @@
   &--catenergy {
 
     @media (min-width: $tablet) {
+      margin-right: auto;
       padding: 55px 0;
     }
 
