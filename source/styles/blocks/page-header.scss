@@ -59,7 +59,12 @@
   @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 174px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 202px;
   }
 }
 
@@ -67,6 +72,14 @@
 
   @media (min-width: $tablet) {
     height: 100%;
+  }
+}
+
+.page-header__logo img:nth-child(2) {
+
+  @media (min-width: $desktop) {
+    width: 118px;
+    height: 21px;
   }
 }
 
@@ -88,14 +101,14 @@
 }
 
 .page-navigation--opened .page-header__button {
-  background-image: url(../../images/icons/close-button.svg);
+  background-image: url("../../images/icons/stack.svg#close-button");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px 18px;
 }
 
 .page-navigation--closed .page-header__button {
-  background-image: url(../../images/icons/burger-button.svg);
+  background-image: url("../../images/icons/stack.svg#burger-button");
   background-repeat: no-repeat;
   background-position: center;
 }

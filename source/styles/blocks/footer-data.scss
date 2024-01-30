@@ -3,16 +3,19 @@
   flex-direction: column;
   gap: 41px;
   align-items: center;
-  padding-top: 42px;
+  padding-top: 40px;
   padding-bottom: 40px;
 
   @media (min-width: $tablet) {
     flex-direction: row;
     gap: 0;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 20px;
+    padding-top: 66px;
+    padding-bottom: 66px;
   }
 }
 
@@ -24,14 +27,7 @@
 
 .footer-data__icon {
   display: block;
-  width: 27px;
-  height: 34px;
   margin-left: auto;
-  mask-image: url("../../images/icons/stack.svg#htmlacademy");
-  background-color: $special-grey-2;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  content: "";
 }
 
 .footer-data__logo {
@@ -53,7 +49,10 @@
       width: auto;
       gap: 23px;
       margin-left: 123px;
-      padding: 55px 0;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: 376px;
     }
   }
 
@@ -61,7 +60,6 @@
 
     @media (min-width: $tablet) {
       margin-right: auto;
-      padding: 55px 0;
     }
 
     &:hover,

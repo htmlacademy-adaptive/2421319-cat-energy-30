@@ -21,7 +21,7 @@
       width: 700px;
       min-height: 694px;
       background-image: linear-gradient(rgba(104,183,56,.851),rgba(104,183,56,.851)),
-                        url("../../images/hero-background-desktop@1x.jpg");
+                        image-set(url(../../images/hero-background-desktop@2x.jpg) 2x, url(../../images/hero-background-desktop@1x.jpg) 1x);
       background-position: right;
       background-repeat: no-repeat;
       background-size: 50%;
@@ -46,7 +46,7 @@
     text-align: center;
     color: $basic-white;
     background-image: linear-gradient(rgba(104,183,56,.851),rgba(104,183,56,.851)),
-                      url("../../images/hero-background@1x.jpg"),
+                      image-set(url(../../images/hero-background@2x.jpg) 2x, url(../../images/hero-background@1x.jpg) 1x),
                       linear-gradient(to right, rgb(53, 94, 28),rgb(32, 59, 16));
     background-position: top;
     background-repeat: no-repeat;

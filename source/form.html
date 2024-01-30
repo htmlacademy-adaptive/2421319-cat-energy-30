@@ -155,20 +155,26 @@
     </main>
 
     <footer class="page__footer">
-      <section class="contacts container">
-        <h2 class="contacts__title title">приглашаем <br>к сотрудничеству <br>дилеров!</h2>
-        <address class="contacts__address">
-          <span>ул. Большая Конюшенная, д. 19/8</span>
-          <span>Санкт-Петербург</span>
-        </address>
+      <section class="contacts">
+        <div class="contacts__contacts-map">
+          <div class="contacts__container container">
+            <div class="contacts__wrap">
+              <h2 class="contacts__title title">приглашаем <br>к сотрудничеству <br>дилеров!</h2>
+              <address class="contacts__address">
+                <span>ул. Большая Конюшенная, д. 19/8</span>
+                <span>Санкт-Петербург</span>
+              </address>
+            </div>
+          </div>
+          <div id="map" class="map">
+            <picture>
+              <source type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="400">
+              <source type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="400">
+              <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Мы на карте.">
+            </picture>
+          </div>
+        </div>
       </section>
-      <div id="map" class="map">
-        <picture>
-          <source type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="400">
-          <source type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="400">
-          <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Мы на карте.">
-        </picture>
-      </div>
       <div class="footer-data container">
         <a class="footer-data__logo footer-data__logo--catenergy" href="index.html">
           <span class="visually-hidden">Cat Energy.</span>
@@ -193,9 +199,14 @@
         </ul>
         <div class="footer-data__logo footer-data__logo--htmlacademy">
           <a class="footer-data__text link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="footer-data__icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
+          <a class="footer-data__icon" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="34">
+              <use xlink:href="../images/icons/stack.svg#htmlacademy"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
   </body>
 </html>
+
