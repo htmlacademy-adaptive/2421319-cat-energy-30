@@ -14,7 +14,7 @@
   </head>
 
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header page-header--index">
       <div class="page-header__wrap">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -94,7 +94,7 @@
         <div class="results__wrap container">
           <h2 class="results__title title">Живой пример</h2>
           <div class="results__container">
-            <p class="results__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <p class="results__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат <br>без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
             <ul class="results__list results-list list">
               <li class="results-list__item">
                 <p class="results-list__label text">5 КГ</p>
@@ -134,20 +134,26 @@
     </main>
 
     <footer class="page__footer">
-      <section class="contacts container">
-        <h2 class="contacts__title title">приглашаем <br>к сотрудничеству <br>дилеров!</h2>
-        <address class="contacts__address">
-          <span>ул. Большая Конюшенная, д. 19/8</span>
-          <span>Санкт-Петербург</span>
-        </address>
+      <section class="contacts">
+        <div class="contacts__contacts-map">
+          <div class="contacts__container container">
+            <div class="contacts__wrap">
+              <h2 class="contacts__title title">приглашаем <br>к сотрудничеству <br>дилеров!</h2>
+              <address class="contacts__address">
+                <span>ул. Большая Конюшенная, д. 19/8</span>
+                <span>Санкт-Петербург</span>
+              </address>
+            </div>
+          </div>
+          <div id="map" class="map">
+            <picture>
+              <source type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="400">
+              <source type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="400">
+              <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Мы на карте.">
+            </picture>
+          </div>
+        </div>
       </section>
-      <div id="map" class="map">
-        <picture>
-          <source type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="400">
-          <source type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="400">
-          <img class="map__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Мы на карте.">
-        </picture>
-      </div>
       <div class="footer-data container">
         <a class="footer-data__logo footer-data__logo--catenergy" href="index.html">
           <span class="visually-hidden">Cat Energy.</span>

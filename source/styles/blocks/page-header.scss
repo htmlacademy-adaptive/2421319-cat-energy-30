@@ -12,6 +12,7 @@
   }
 
   @media (min-width: $desktop) {
+    position: relative;
     padding-top: 47px;
   }
 
@@ -22,7 +23,11 @@
   @media (min-width: $tablet) {
     display: flex;
     margin: auto;
-    width: 705px;
+    width: 704px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
   }
 }
 

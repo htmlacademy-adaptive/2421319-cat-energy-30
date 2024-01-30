@@ -1,5 +1,5 @@
-let navMain = document.querySelector('.page-navigation');
-let navToggle = document.querySelector('.page-header__button');
+const navMain = document.querySelector('.page-navigation');
+const navToggle = document.querySelector('.page-header__button');
 
 navMain.classList.remove('page-navigation--nojs');
 
@@ -14,11 +14,11 @@ navToggle.addEventListener('click', function () {
 });
 
 
-const slider = document.querySelector(".slider__slider");
-const sliderWrapper = document.querySelector(".slider");
-const sliderButton = document.querySelector(".slider__button");
-const sliderBefore = document.querySelector(".slider__image--before");
-const sliderAfter = document.querySelector(".slider__image--after");
+const slider = document.querySelector('.slider__slider');
+const sliderWrapper = document.querySelector('.slider');
+const sliderButton = document.querySelector('.slider__button');
+const sliderBefore = document.querySelector('.slider__image--before');
+const sliderAfter = document.querySelector('.slider__image--after');
 
 let start = false;
 let position;
@@ -75,23 +75,23 @@ const slideIt = (x) => {
 ymaps.ready(init);
 function init(){
 
-  var myMap = new ymaps.Map("map", {
-    center: [59.93863106417265,30.323036499999905],
-    zoom: 17,
-    controls: ['zoomControl'],
-    behaviors: ['drag']
-}, {
-    searchControlProvider: 'yandex#search'
-}),
-myPlacemark = new ymaps.Placemark([59.93863106417265,30.323036499999905], {
+  let myMap = new ymaps.Map('map', {
+      center: [59.93863106417265,30.323036499999905],
+      zoom: 15,
+      controls: ['zoomControl'],
+      behaviors: ['drag']
+    }, {
+      searchControlProvider: 'yandex#search'
+    }),
+    myPlacemark = new ymaps.Placemark([59.93863106417265,30.323036499999905], {
     hintContent: "ул. Большая Конюшенная, д. 19/8"
-},
-{
-  iconLayout: 'default#image',
-  iconImageHref: '/images/map-pin@1x.png',
-  iconImageSize: [57, 53],
-  iconImageOffset: [-28, -53]
-});
+    },
+    {
+      iconLayout: 'default#image',
+      iconImageHref: '/images/map-pin@1x.png',
+      iconImageSize: [57, 53],
+      iconImageOffset: [-28, -53]
+    });
 
-myMap.geoObjects.add(myPlacemark);
+  myMap.geoObjects.add(myPlacemark);
 }

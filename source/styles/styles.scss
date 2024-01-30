@@ -1,7 +1,6 @@
 /* GLOBAL */
 @import "./global/mixins.scss";
 @import "./global/fonts.scss";
-@import "./global/common.scss";
 @import "./global/variables.scss";
 @import "./global/global.scss";
 @import "./global/visually-hidden.scss";
@@ -18,7 +17,6 @@
 @import "./blocks/page-navigation.scss";
 @import "./blocks/site-list.scss";
 @import "./blocks/hero.scss";
-@import "./blocks/programs.scss";
 @import "./blocks/programs-list.scss";
 @import "./blocks/advantages.scss";
 @import "./blocks/advantages-list.scss";
@@ -39,10 +37,8 @@
 @import "./blocks/catalog.scss";
 @import "./blocks/card.scss";
 @import "./blocks/card-list.scss";
-@import "./blocks/card-title.scss";
 @import "./blocks/card-table.scss";
 @import "./blocks/option-catalog.scss";
-@import "./blocks/option-card.scss";
 @import "./blocks/promo.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/map.scss";

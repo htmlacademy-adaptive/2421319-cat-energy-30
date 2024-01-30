@@ -35,9 +35,13 @@
 .results__wrap {
 
   @media (min-width: $desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+
+    grid-template-areas:
+    "A C"
+    "B C";
   }
 }
 
@@ -51,8 +55,10 @@
   }
 
   @media (min-width: $desktop) {
-    width: 500px;
+    width: 460px;
     padding-bottom: 0;
+
+    grid-area: B;
   }
 }
 
@@ -67,6 +73,8 @@
     width: 100%;
     padding-top: 69px;
     padding-bottom: 0;
+
+    grid-area: A;
   }
 }
 

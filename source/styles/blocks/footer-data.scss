@@ -10,6 +10,10 @@
     flex-direction: row;
     gap: 0;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 20px;
+  }
 }
 
 .footer-data__text {
