@@ -70,10 +70,7 @@
   height: 40px;
   border-radius: 50%;
   background-color: $basic-white;
-  background: url(../../images/icons/thumb.svg);
+  background-image: url(../../images/icons/thumb.svg);
   border: 2px solid $special-grey-2;
-
-  @media (hover: hover) {
-    cursor: pointer;
-  }
+  cursor: pointer;
 }

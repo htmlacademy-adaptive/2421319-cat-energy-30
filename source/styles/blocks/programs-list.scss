@@ -132,6 +132,8 @@
 }
 
 .programs-list__link {
+  display: flex;
+  gap: 15px;
   padding-top: 17px;
   font-size: 16px;
   line-height: 16px;
@@ -142,5 +144,25 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: normal;
+  }
+
+  &:after {
+    display: block;
+    width: 32px;
+    height: 16px;
+    background-image: url("../../images/icons/stack.svg#arrow");
+    background-position: -8px;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+    content: "";
+  }
+
+  &:hover:after,
+  &:focus:after {
+    background-position: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
