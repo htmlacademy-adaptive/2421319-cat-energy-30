@@ -65,6 +65,15 @@
 
   @media (min-width: $desktop) {
     width: 202px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -90,7 +99,7 @@
     position: absolute;
     display: block;
     top: -49px;
-    right: 40px;
+    right: calc((100vw - 280px) / 2);
     width: 30px;
     height: 30px;
     border: none;

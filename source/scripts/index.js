@@ -25,11 +25,11 @@ let position;
 let translateX = 0;
 
 if (sliderButton && slider) {
-  sliderButton.addEventListener("pointerdown", (e) => {
+  sliderButton.addEventListener('pointerdown', () => {
     start = true;
   });
 
-  sliderWrapper.addEventListener("pointermove", (e) => {
+  sliderWrapper.addEventListener('pointermove', (e) => {
     e.preventDefault();
     if (start) {
       if (position) {
@@ -41,7 +41,7 @@ if (sliderButton && slider) {
     }
   });
 
-  document.addEventListener("pointerup", (e) => {
+  document.addEventListener('pointerup', () => {
     start = false;
   });
 }
@@ -53,8 +53,8 @@ const slideIt = (x) => {
   const sliderAfterWidth =
     sliderWrapper.getBoundingClientRect().width - sliderBeforeWidth;
 
-  sliderBefore.style.width = sliderBeforeWidth + "px";
-  sliderAfter.style.width = sliderAfterWidth + "px";
+  sliderBefore.style.width = sliderBeforeWidth + 'px';
+  sliderAfter.style.width = sliderAfterWidth + 'px';
 
   let sliderTranslate = translateX - x;
 
@@ -75,7 +75,7 @@ const slideIt = (x) => {
 ymaps.ready(init);
 function init(){
 
-  let myMap = new ymaps.Map('map', {
+  const myMap = new ymaps.Map('map', {
       center: [59.93863106417265,30.323036499999905],
       zoom: 15,
       controls: ['zoomControl'],
@@ -84,7 +84,7 @@ function init(){
       searchControlProvider: 'yandex#search'
     }),
     myPlacemark = new ymaps.Placemark([59.93863106417265,30.323036499999905], {
-    hintContent: "ул. Большая Конюшенная, д. 19/8"
+      hintContent: 'ул. Большая Конюшенная, д. 19/8'
     },
     {
       iconLayout: 'default#image',

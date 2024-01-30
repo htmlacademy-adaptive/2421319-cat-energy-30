@@ -95,6 +95,21 @@
     font-size: 20px;
     line-height: normal;
   }
+
+  @media (min-width: $desktop) {
+
+    &:hover {
+      border: 1px solid $line-color-grey-2;
+    }
+
+    &:focus {
+      border: 2px solid $special-dark-grey;
+    }
+
+    &--error {
+      border: 2px solid $status-error;
+    }
+  }
 }
 
 .form-list__item--email .form-list__input,

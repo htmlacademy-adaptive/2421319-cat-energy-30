@@ -36,15 +36,6 @@
     display: flex;
     width: 100%;
 
-    &:hover .footer-data__icon,
-    &:focus .footer-data__icon {
-      background-color: $basic-green;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-
     @media (min-width: $tablet) {
       width: auto;
       gap: 23px;
@@ -53,6 +44,15 @@
 
     @media (min-width: $desktop) {
       margin-left: 376px;
+
+      &:hover .footer-data__icon,
+      &:focus .footer-data__icon {
+        color: $basic-green;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 
@@ -62,13 +62,16 @@
       margin-right: auto;
     }
 
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
+    @media (min-width: $desktop) {
 
-    &:active {
-      opacity: 0.6;
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
     }
   }
 }
