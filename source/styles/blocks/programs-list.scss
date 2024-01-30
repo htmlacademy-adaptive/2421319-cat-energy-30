@@ -155,6 +155,10 @@
     background-repeat: no-repeat;
     transition: 0.3s ease-in-out;
     content: "";
+
+    @media (min-width: $tablet) {
+      height: 30px;
+    }
   }
 
   &:hover:after,

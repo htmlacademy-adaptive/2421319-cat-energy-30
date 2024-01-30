@@ -89,7 +89,7 @@
   @media (max-width: $mobile-only) {
     position: absolute;
     display: block;
-    top: -50px;
+    top: -49px;
     right: 40px;
     width: 30px;
     height: 30px;
@@ -111,5 +111,6 @@
   background-image: url("../../images/icons/stack.svg#burger-button");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 24px 24px;
 }
 
