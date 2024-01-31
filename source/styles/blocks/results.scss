@@ -1,6 +1,6 @@
 .results {
   position: relative;
-  padding-top: 6px;
+  padding-top: 29px;
   padding-bottom: 40px;
   background-color: $grey;
 
@@ -46,7 +46,7 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 83px;
+    padding-bottom: 103px;
   }
 
   @media (min-width: $desktop) {
@@ -61,7 +61,7 @@
   padding-bottom: 42px;
 
   @media (min-width: $tablet) {
-    padding-bottom: 61px;
+    padding-bottom: 58px;
   }
 
   @media (min-width: $desktop) {
@@ -83,6 +83,8 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 146px;
+    padding-top: 145px;
+    padding-right: 20px;
+    padding-bottom: 67px;
   }
 }

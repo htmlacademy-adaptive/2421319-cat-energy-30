@@ -4,7 +4,7 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 58px 60px;
   }
 
   @media (min-width: $desktop) {

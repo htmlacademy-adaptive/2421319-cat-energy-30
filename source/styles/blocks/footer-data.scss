@@ -1,7 +1,7 @@
 .footer-data {
   display: flex;
   flex-direction: column;
-  gap: 41px;
+  gap: 37px;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -42,7 +42,7 @@
     }
 
     @media (min-width: $desktop) {
-      margin-left: 376px;
+      margin-left: 382px;
 
       &:hover .footer-data__icon,
       &:focus .footer-data__icon {

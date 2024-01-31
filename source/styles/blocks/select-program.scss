@@ -37,8 +37,12 @@
   gap: 13px;
 
   @media (min-width: $tablet) {
-    gap: 11px;
+    gap: 16px;
     padding: 23px 27px;
     border: 1px solid $line-color-grey-3;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 11px;
   }
 }

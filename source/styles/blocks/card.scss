@@ -3,8 +3,8 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
-  padding-top: 20px;
-  padding-bottom: 24px;
+  padding-top: 22px;
+  padding-bottom: 27px;
 
   grid-template-areas:
     "A B"
@@ -93,7 +93,7 @@
     content: "";
 
     @media (min-width: $tablet) {
-      margin-bottom: 50px;
+      margin-bottom: 53px;
       width: 60px;
       height: 60px;
     }
@@ -118,24 +118,27 @@
 
 .card__image {
   margin: auto;
+  padding-bottom: 12px;
 
   grid-area: A;
 
   @media (min-width: $tablet) {
-    padding-bottom: 22px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 17px;
     height: 228px;
     order: -1;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 17px;
+    padding-top: 11px;
     padding-bottom: 0;
   }
 }
 
 .card__title {
   margin: 0;
-  padding-right: 40px;
+  padding-right: 50px;
   padding-bottom: 14px;
   font-family: $secondary-font;
   font-size: 16px;
@@ -147,7 +150,7 @@
   grid-area: B;
 
   @media (min-width: $tablet) {
-    padding: 4px 57px 20px;
+    padding: 4px 57px 15px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -161,7 +164,7 @@
     padding: 0 0 8px;
 
     @media (min-width: $tablet) {
-      padding: 0 34px 23px;
+      padding: 0 40px 23px;
     }
 
     @media (min-width: $desktop) {

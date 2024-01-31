@@ -39,7 +39,8 @@
 
   @media (min-width: $desktop) {
     width: 50%;
-    grid-template-columns: 165px auto;
+    grid-template-columns: 161px auto;
+    padding: 41px 28px 58px 53px;
 
     grid-template-areas:
       "A B"
@@ -59,12 +60,14 @@
     grid-area: A;
 
     @media (min-width: $tablet) {
-      margin: 0 auto;
+      margin-top: 2px;
+      margin-left: 30px;
       width: 200px;
       height: 211px;
     }
 
     @media (min-width: $desktop) {
+      margin: 0;
       width: 100px;
       height: 108px;
     }
@@ -89,6 +92,9 @@
     }
 
     @media (min-width: $desktop) {
+      margin-top: 7px;
+      margin-left: -18px;
+      margin-bottom: 0;
       width: 134px;
       height: 100px;
     }
@@ -123,11 +129,15 @@
   grid-area: C;
 
   @media (min-width: $tablet) {
-    padding: 24px 19px 35px 0;
+    padding: 24px 30px 35px 0;
     font-size: 16px;
     line-height: 24px;
     color: $basic-black;
     border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 38px 30px 11px 0;
   }
 }
 
@@ -142,6 +152,7 @@
   grid-area: D;
 
   @media (min-width: $tablet) {
+    gap: 24px;
     font-size: 20px;
     line-height: normal;
   }

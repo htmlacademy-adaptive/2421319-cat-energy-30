@@ -2,7 +2,7 @@
   @media (min-width: $tablet) {
     margin: auto;
     width: 708px;
-    min-height: 864px;
+    min-height: 869px;
     background-image: url("../../images/hero-tablet@1x.jpg");
     background-position: bottom;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
   @media (min-width: $desktop) {
     position: relative;
     margin: 0;
-    margin-bottom: 57px;
+    margin-bottom: 76px;
     padding: 86px 0 66px;
     width: 100%;
     min-height: 580px;
@@ -54,7 +54,7 @@
 
 .hero__wrap {
   @media (min-width: $tablet) {
-    padding: 28px 90px;
+    padding: 36px 90px;
   }
 
   @media (min-width: $desktop) {

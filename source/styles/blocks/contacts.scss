@@ -9,8 +9,12 @@
 }
 
 .contacts__container {
-  padding-top: 26px;
+  padding-top: 29px;
   padding-bottom: 26px;
+
+  @media (min-width: $tablet) {
+    padding: 63px 70px 56px 70px;
+  }
 
   @media (min-width: $desktop) {
     position: relative;
@@ -27,7 +31,7 @@
   gap: 11px;
 
   @media (min-width: $desktop) {
-    padding: 58px 80px;
+    padding: 60px 80px;
     width: 565px;
     background-color: $basic-white;
   }
@@ -60,6 +64,10 @@
     width: 160px;
     font-size: 16px;
     text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
   }
 }
 

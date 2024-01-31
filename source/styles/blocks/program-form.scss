@@ -1,15 +1,15 @@
 .program-form {
   padding-top: 27px;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet) {
-    padding-top: 55px;
+    padding-top: 63px;
     padding-bottom: 60px;
     border: none;
   }
 
   @media (min-width: $desktop) {
-    padding-top: 65px;
+    padding-top: 74px;
     padding-bottom: 79px;
   }
 }
@@ -20,7 +20,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
-    padding-top: 54px;
+    padding-top: 51px;
   }
 
   @media (min-width: $desktop) {

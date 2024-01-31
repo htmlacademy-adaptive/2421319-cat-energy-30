@@ -68,7 +68,7 @@
 }
 
 .site-list__item--current .site-list__link--index {
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     border-bottom: 2px solid $basic-white;
   }
 }
