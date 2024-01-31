@@ -1,0 +1,60 @@
+.option-catalog__title {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  max-width: fit-content;
+  background-color: $basic-white;
+  box-shadow: -20px 0 0 $basic-white, 20px 0 0 $basic-white;
+
+  @media (max-width: $mobile-only) {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      height: 1px;
+      width: 280px;
+      background: $line-color-grey-2;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding: 25px 40px 80px;
+    box-shadow: 0 0 0 $basic-white, 0 0 0 $basic-white;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 25px 0 80px;
+    box-shadow: 40px 0 0 $basic-white, -40px 0 0 $basic-white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 37px;
+    right: 0;
+    z-index: -1;
+    height: 2px;
+    width: 100vw;
+    background: $basic-green;
+    box-shadow: 100vw 0 0 $basic-green;
+
+    @media (min-width: $tablet) {
+      top: 47px;
+    }
+  }
+}
+
+.option-catalog__wrap {
+  padding-bottom: 31px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 73px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    padding-bottom: 91px;
+  }
+}

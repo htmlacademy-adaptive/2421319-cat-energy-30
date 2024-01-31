@@ -1,0 +1,88 @@
+.slider {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: $tablet) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 70px 0 0 196px;
+    grid-area: C;
+  }
+}
+
+
+.slider__image {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 280px;
+    height: 256px;
+    max-width: initial;
+    user-select: none;
+    pointer-events: none;
+
+    @media (min-width: $tablet) {
+      width: 560px;
+      height: 512px;
+    }
+  }
+
+  &--after {
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+.slider__slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  margin-left: -2px;
+  width: 4px;
+  height: 100%;
+  background-color: $special-grey-2;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  mask-image:
+    linear-gradient(#ffffff, #ffffff),
+    url("../../images/icons/stack.svg#thumb");
+  background-color: $basic-green;
+  border: 2px solid $special-grey-2;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid $basic-green;
+  }
+}

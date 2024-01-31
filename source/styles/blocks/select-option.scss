@@ -1,0 +1,48 @@
+.select-option {
+  padding-bottom: 32px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 39px;
+    grid-area: E;
+  }
+}
+
+.select-option__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 30px;
+    padding-bottom: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 85px;
+  }
+}
+
+.select-option__legend {
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 57px;
+  }
+}
+
+.select-option__item {
+  @media (min-width: $tablet) {
+    width: 265px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 240px;
+  }
+}

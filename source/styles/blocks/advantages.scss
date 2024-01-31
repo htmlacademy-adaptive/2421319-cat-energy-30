@@ -1,0 +1,26 @@
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet) {
+    padding-top: 45px;
+    padding-bottom: 104px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 76px;
+    padding-bottom: 13px;
+  }
+}
+
+.advantages__title {
+  padding-bottom: 42px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 69px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 67px;
+  }
+}

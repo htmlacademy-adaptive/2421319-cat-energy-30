@@ -1,15 +1,25 @@
 /* здесь используйте глобальные переменные */
-$primary-font: "Lato", "Oswald", "Arial", sans-serif;
-$secondary-font: "Oswald", "Lato", "Arial", sans-serif;
+$primary-font: "Lato", "Arial", sans-serif;
+$secondary-font: "Oswald", "Arial", sans-serif;
 
 $basic-white: #ffffff;
 $basic-grey: #f2f2f2;
+$grey: #eaeaea;
+$line-color-grey: #d9d9d9;
+$line-color-grey-2: #cdcdcd;
+$line-color-grey-3: #e7e7e7;
+$line-color-grey-4: #e6e6e6;
+$card-line-color-grey: #ebebeb;
 $special-grey-2:#666666;
 $special-dark-grey: #444444;
 $special-dark-grey-2: #222222;
 $basic-black: #000000;
+$black: #111111;
 $basic-green: #68b738;
 $basic-green-2: #5eaa2f;
+$status-error: #ff8282;
 
+$mobile-only: 767px;
 $tablet: 768px;
+$tablet-only: 1439px;
 $desktop: 1440px;

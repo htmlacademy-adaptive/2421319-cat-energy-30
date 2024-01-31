@@ -1,42 +1,66 @@
 .footer-data {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 37px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
-  &__text {
-    font-size: 16px;
-    line-height: 20px;
-    align-self: center;
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    gap: 0;
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 
-  &__icon {
-    display: block;
-    width: 27px;
-    height: 34px;
-    mask-image: url("../../images/icons/stack.svg#htmlacademy");
-    background-color: $special-grey-2;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    content: "";
+  @media (min-width: $desktop) {
+    padding-top: 66px;
+    padding-bottom: 66px;
   }
+}
 
-  &__logo {
+.footer-data__text {
+  font-size: 16px;
+  line-height: 20px;
+  align-self: center;
+}
 
-    &--htmlacademy {
-      display: flex;
+.footer-data__icon {
+  display: block;
+  margin-left: auto;
+}
+
+.footer-data__logo {
+  &--htmlacademy {
+    display: flex;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      width: auto;
       gap: 23px;
+      margin-left: 123px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: 382px;
 
       &:hover .footer-data__icon,
       &:focus .footer-data__icon {
-        background-color: $basic-green;
+        color: $basic-green;
       }
 
       &:active {
         opacity: 0.3;
       }
     }
+  }
 
-    &--catenergy {
+  &--catenergy {
+    @media (min-width: $tablet) {
+      margin-right: auto;
+    }
 
+    @media (min-width: $desktop) {
       &:hover,
       &:focus {
         opacity: 0.8;

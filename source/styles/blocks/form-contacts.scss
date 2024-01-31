@@ -1,0 +1,20 @@
+.form-contacts {
+  padding-top: 26px;
+  padding-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 65px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 70px;
+    grid-area: C;
+  }
+}
+
+.form-contacts__legend {
+  @media (max-width: $mobile-only) {
+    width: 187px;
+  }
+}

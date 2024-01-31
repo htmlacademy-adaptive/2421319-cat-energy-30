@@ -1,14 +1,75 @@
 .promo {
+  padding: 3px 17px 43px;
+  background-image:
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    image-set(url("../../images/promo-background@2x.jpg") 2x, url("../../images/promo-background@1x.jpg") 1x);
+  background-size: cover;
+  background-position: center;
 
-  &__text:before {
+  @media (min-width: $tablet) {
+    margin-top: 69px;
+    padding: 10px 78px;
+    background-position-y: 60%;
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: auto;
+    padding: 0;
+    width: 245px;
+  }
+}
+
+.promo__img {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 219px;
+    width: 505px;
+  }
+
+  @media (min-width: $desktop) {
     display: block;
-    width: 78px;
-    height: 80px;
+    width: auto;
+  }
+
+  &::before {
+    display: block;
+    margin: auto;
+    margin-top: 56px;
+    margin-bottom: 48px;
+    width: 80px;
+    height: 82px;
     background-image: url("../../images/icons/stack.svg#promo");
-    background-size: 56.35px 60.53px;
-    background-color: $basic-green;
     background-repeat: no-repeat;
     background-position: center;
     content: "";
+
+    @media (min-width: $tablet) {
+      margin: 47px 0 52px;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 56px auto 50px;
+    }
+  }
+}
+
+.promo__text {
+  padding: 0 42px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $basic-white;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: center;
   }
 }

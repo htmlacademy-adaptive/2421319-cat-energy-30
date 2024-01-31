@@ -1,80 +1,183 @@
 .programs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   font-family: $secondary-font;
   color: $basic-black;
 
-    &__subtitle {
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 37px;
-      text-transform: uppercase;
+  @media (min-width: $tablet) {
+    gap: 30px;
+  }
 
-      @media (min-width: $tablet) {
-        font-size: 36px;
-        line-height: 36px;
-      }
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    gap: 80px;
+  }
+}
 
-      &--slim:before {
-        display: block;
-        width: 50px;
-        height: 53px;
-        margin: 0 0 20px;
-        background-image: url("../../images/icons/stack.svg#cat-slim");
-        background-repeat: no-repeat;
-        background-position: center;
-        content: "";
+.programs-list__item {
+  display: grid;
+  padding: 24px 20px;
+  grid-template-columns: 70px auto;
+  grid-template-rows: auto auto auto;
+  background-color: $basic-grey;
 
-        @media (min-width: $tablet) {
-          width: 200px;
-          height: 211px;
-        }
+  grid-template-areas:
+    "A B"
+    "C C"
+    "D D";
 
-        @media (min-width: $desktop) {
-          width: 100px;
-          height: 108px;
-        }
-      }
+  @media (min-width: $tablet) {
+    padding: 78px 28px 58px 53px;
+    grid-template-columns: auto 265px;
 
-      &--pro:before {
-        display: block;
-        width: 67px;
-        height: 50px;
-        margin: 0 0 20px;
-        background-image: url("../../images/icons/stack.svg#cat-pro");
-        background-repeat: no-repeat;
-        background-position: center;
-        content: "";
+    grid-template-areas:
+      "B A"
+      "C A"
+      "D A";
+  }
 
-        @media (min-width: $tablet) {
-          width: 268px;
-          height: 200px;
-        }
+  @media (min-width: $desktop) {
+    width: 50%;
+    grid-template-columns: 161px auto;
+    padding: 41px 28px 58px 53px;
 
-        @media (min-width: $desktop) {
-          width: 134px;
-          height: 100px;
-        }
-      }
+    grid-template-areas:
+      "A B"
+      "C C"
+      "D D";
+  }
+
+  &--slim::before {
+    display: block;
+    width: 50px;
+    height: 53px;
+    background-image: url("../../images/icons/stack.svg#cat-slim");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+
+    grid-area: A;
+
+    @media (min-width: $tablet) {
+      margin-top: 2px;
+      margin-left: 30px;
+      width: 200px;
+      height: 211px;
     }
 
-    &__text {
-      font-family: $primary-font;
-      color: $special-dark-grey;
+    @media (min-width: $desktop) {
+      margin: 0;
+      width: 100px;
+      height: 108px;
+    }
+  }
 
-      @media (min-width: $tablet) {
-        font-size: 16px;
-        line-height: 24px;
-        color: $basic-black;
-      }
+  &--pro::before {
+    display: block;
+    margin-left: -7px;
+    width: 67px;
+    height: 50px;
+    background-image: url("../../images/icons/stack.svg#cat-pro");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+
+    grid-area: A;
+
+    @media (min-width: $tablet) {
+      margin: 12px auto;
+      width: 268px;
+      height: 200px;
     }
 
-    &__link {
-      font-size: 16px;
-      line-height: 16px;
-      text-transform: uppercase;
-
-      @media (min-width: $tablet) {
-        font-size: 20px;
-        line-height: normal;
-      }
+    @media (min-width: $desktop) {
+      margin-top: 7px;
+      margin-left: -18px;
+      margin-bottom: 0;
+      width: 134px;
+      height: 100px;
     }
+  }
+}
+
+.programs-list__subtitle {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+
+  grid-area: B;
+
+  @media (min-width: $tablet) {
+    padding: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.programs-list__text {
+  margin: 0;
+  padding: 22px 13px 22px 0;
+  font-family: $primary-font;
+  color: $special-dark-grey;
+  border-bottom: 1px solid $line-color-grey;
+
+  grid-area: C;
+
+  @media (min-width: $tablet) {
+    padding: 24px 30px 35px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: $basic-black;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 38px 30px 11px 0;
+  }
+}
+
+.programs-list__link {
+  display: flex;
+  gap: 15px;
+  padding-top: 17px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  grid-area: D;
+
+  @media (min-width: $tablet) {
+    gap: 24px;
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  &::after {
+    display: block;
+    width: 32px;
+    height: 16px;
+    background-image: url("../../images/icons/stack.svg#arrow");
+    background-position: -8px;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+    content: "";
+
+    @media (min-width: $tablet) {
+      height: 30px;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-position: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

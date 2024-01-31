@@ -1,0 +1,28 @@
+.card-list {
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 58px 60px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 44px 80px;
+  }
+
+  &--option {
+    padding-bottom: 35px;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      gap: 0;
+    }
+
+    @media (min-width: $desktop) {
+      width: 895px;
+    }
+  }
+}

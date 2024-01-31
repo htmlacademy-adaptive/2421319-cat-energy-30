@@ -1,0 +1,31 @@
+.page-navigation {
+  @media (max-width: $mobile-only) {
+    position: absolute;
+    background-color: $basic-white;
+    z-index: 99;
+    width: 100%;
+  }
+
+  @media (min-width: $tablet) {
+    margin-left: auto;
+    padding-top: 6px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 474px;
+  }
+}
+
+.page-navigation--closed .site-list__item {
+  @media (max-width: $mobile-only) {
+    display: none;
+  }
+}
+
+.page-navigation--nojs .page-header__button {
+  display: none;
+}
+
+.page-navigation--nojs .site-list__item {
+  display: block;
+}

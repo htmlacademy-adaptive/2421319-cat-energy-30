@@ -1,5 +1,118 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+.page-header {
+  @media (max-width: $mobile-only) {
+    position: relative;
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 55px;
+  }
+}
+
+.page-header__wrap {
+  @media (min-width: $tablet) {
+    display: flex;
+    margin: auto;
+    width: 704px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+  }
+}
+
+.page-header__logo {
+  position: relative;
+  display: flex;
+
+  @media (max-width: $mobile-only) {
+    gap: 56px;
+    align-items: center;
+    margin: auto;
+    padding: 12px 0 12px;
+    width: 280px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: $line-color-grey-4;
+      height: 1px;
+      width: 100vw;
+      right: 0;
+      bottom: 0;
+      box-shadow: 100vw 0 0 $line-color-grey-4;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 174px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 202px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+.page-header__logo img {
+  @media (min-width: $tablet) {
+    height: 100%;
+  }
+}
+
+.page-header__logo img:nth-child(2) {
+  @media (min-width: $desktop) {
+    width: 118px;
+    height: 22px;
+  }
+}
+
+.page-header__button {
+  display: none;
+
+  @media (max-width: $mobile-only) {
+    position: absolute;
+    display: block;
+    top: -49px;
+    right: calc((100vw - 283px) / 2);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: $basic-white;
+
+    cursor: pointer;
+  }
+}
+
+.page-navigation--opened .page-header__button {
+  right: calc((100vw - 290px)/2);
+  background-image: url("../../images/icons/stack.svg#close-button");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.page-navigation--closed .page-header__button {
+  background-image: url("../../images/icons/stack.svg#burger-button");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
 }

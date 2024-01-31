@@ -1,0 +1,48 @@
+.select-program {
+  position: relative;
+  margin-bottom: 27px;
+  padding-top: 22px;
+  padding-bottom: 19px;
+
+  @media (max-width: $mobile-only) {
+    &::after {
+      content: "";
+      position: absolute;
+      background: $card-line-color-grey;
+      height: 1px;
+      width: 100vw;
+      right: 0;
+      bottom: 0;
+      box-shadow: 100vw 0 0 $card-line-color-grey;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 126px;
+    grid-area: B;
+    margin-bottom: 30px;
+  }
+}
+
+.select-program__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  @media (min-width: $tablet) {
+    gap: 16px;
+    padding: 23px 27px;
+    border: 1px solid $line-color-grey-3;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 11px;
+  }
+}
