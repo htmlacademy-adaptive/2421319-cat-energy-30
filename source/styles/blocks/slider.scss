@@ -22,7 +22,6 @@
   width: 50%;
   height: 100%;
   overflow: hidden;
-  position: relative;
 
   img {
     display: block;
@@ -39,7 +38,6 @@
   }
 
   &--after {
-
     img {
       position: absolute;
       right: 0;
@@ -70,7 +68,7 @@
   height: 40px;
   border-radius: 50%;
   background-color: $basic-white;
-  background-image: url(../../images/icons/thumb.svg);
+  background-image: url("../../images/icons/thumb.svg");
   border: 2px solid $special-grey-2;
   cursor: pointer;
 }

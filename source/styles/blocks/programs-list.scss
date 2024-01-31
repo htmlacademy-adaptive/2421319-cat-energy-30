@@ -23,18 +23,18 @@
   background-color: $basic-grey;
 
   grid-template-areas:
-  "A B"
-  "C C"
-  "D D";
+    "A B"
+    "C C"
+    "D D";
 
   @media (min-width: $tablet) {
     padding: 78px 28px 58px 53px;
     grid-template-columns: auto 265px;
 
     grid-template-areas:
-    "B A"
-    "C A"
-    "D A";
+      "B A"
+      "C A"
+      "D A";
   }
 
   @media (min-width: $desktop) {
@@ -42,12 +42,12 @@
     grid-template-columns: 165px auto;
 
     grid-template-areas:
-    "A B"
-    "C C"
-    "D D";
+      "A B"
+      "C C"
+      "D D";
   }
 
-  &--slim:before {
+  &--slim::before {
     display: block;
     width: 50px;
     height: 53px;
@@ -70,7 +70,7 @@
     }
   }
 
-  &--pro:before {
+  &--pro::before {
     display: block;
     margin-left: -7px;
     width: 67px;
@@ -146,7 +146,7 @@
     line-height: normal;
   }
 
-  &:after {
+  &::after {
     display: block;
     width: 32px;
     height: 16px;
@@ -161,8 +161,8 @@
     }
   }
 
-  &:hover:after,
-  &:focus:after {
+  &:hover::after,
+  &:focus::after {
     background-position: 0;
   }
 

@@ -43,21 +43,18 @@
 }
 
 .card-table__row--option td:nth-child(1) {
-
   @media (min-width: $tablet) {
     padding-right: 55px;
   }
 }
 
 .card-table__content {
-
   @media (min-width: $tablet) {
     padding: 5px 0;
     border-bottom: 1px solid $line-color-grey-2;
   }
 
   &--option {
-
     @media (min-width: $tablet) {
       border-bottom: none;
     }

@@ -1,5 +1,3 @@
-
-
 const navMain = document.querySelector('.page-navigation');
 const navToggle = document.querySelector('.page-header__button');
 
@@ -32,8 +30,8 @@ const slideIt = (x) => {
   const sliderAfterWidth =
     sliderWrapper.getBoundingClientRect().width - sliderBeforeWidth;
 
-  sliderBefore.style.width = `${sliderBeforeWidth }px`;
-  sliderAfter.style.width = `${sliderAfterWidth }px`;
+  sliderBefore.style.width = `${sliderBeforeWidth}px`;
+  sliderAfter.style.width = `${sliderAfterWidth}px`;
 
   let sliderTranslate = translateX - x;
 
@@ -73,26 +71,41 @@ if (sliderButton && slider) {
   });
 }
 
-ymaps.ready(init);
-function init(){
+document.addEventListener('DOMContentLoaded', () => {
+  const ymaps = window.ymaps;
 
-  const myMap = new ymaps.Map('map', {
-      center: [59.93863106417265,30.323036499999905],
-      zoom: 15,
-      controls: ['zoomControl'],
-      behaviors: ['drag']
-    }, {
-      searchControlProvider: 'yandex#search'
-    }),
-    myPlacemark = new ymaps.Placemark([59.93863106417265,30.323036499999905], {
-      hintContent: 'ул. Большая Конюшенная, д. 19/8'
-    },
-    {
-      iconLayout: 'default#image',
-      iconImageHref: '/images/map-pin@1x.png',
-      iconImageSize: [57, 53],
-      iconImageOffset: [-28, -53]
-    });
+  const init = () => {
+    if (!ymaps) {
+      return;
+    }
 
-  myMap.geoObjects.add(myPlacemark);
-}
+    const myMap = new ymaps.Map(
+        'map',
+        {
+          center: [59.93863106417265, 30.323036499999905],
+          zoom: 15,
+          controls: ['zoomControl'],
+          behaviors: ['drag'],
+        },
+        {
+          searchControlProvider: 'yandex#search',
+        }
+      ),
+      myPlacemark = new ymaps.Placemark(
+        [59.93863106417265, 30.323036499999905],
+        {
+          hintContent: 'ул. Большая Конюшенная, д. 19/8',
+        },
+        {
+          iconLayout: 'default#image',
+          iconImageHref: '/images/map-pin@1x.png',
+          iconImageSize: [57, 53],
+          iconImageOffset: [-28, -53],
+        }
+      );
+
+    myMap.geoObjects.add(myPlacemark);
+  };
+
+  ymaps.ready(init);
+});

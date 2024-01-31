@@ -31,16 +31,15 @@
     padding-top: 55px;
 
     grid-template-areas:
-    "A B"
-    "C C"
-    "D D"
-    "E E"
-    "F F";
+      "A B"
+      "C C"
+      "D D"
+      "E E"
+      "F F";
   }
 }
 
 .program-form__button-wrap {
-
   @media (min-width: $tablet) {
     display: flex;
     gap: 60px;

@@ -1,5 +1,4 @@
 .page-navigation {
-
   @media (max-width: $mobile-only) {
     position: absolute;
     background-color: $basic-white;
@@ -17,7 +16,6 @@
 }
 
 .page-navigation--closed .site-list__item {
-
   @media (max-width: $mobile-only) {
     display: none;
   }

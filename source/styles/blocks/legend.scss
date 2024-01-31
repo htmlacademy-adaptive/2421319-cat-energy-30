@@ -8,7 +8,7 @@
   background-color: $basic-white;
   box-shadow: -20px 0 0 $basic-white, 20px 0 0 $basic-white;
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     background: $basic-green;

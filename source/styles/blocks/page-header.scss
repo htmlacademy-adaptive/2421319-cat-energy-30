@@ -1,5 +1,4 @@
 .page-header {
-
   @media (max-width: $mobile-only) {
     position: relative;
   }
@@ -14,11 +13,9 @@
   @media (min-width: $desktop) {
     padding-top: 55px;
   }
-
 }
 
 .page-header__wrap {
-
   @media (min-width: $tablet) {
     display: flex;
     margin: auto;
@@ -34,7 +31,6 @@
   position: relative;
   display: flex;
 
-
   @media (max-width: $mobile-only) {
     gap: 56px;
     align-items: center;
@@ -42,7 +38,7 @@
     padding: 13px 0 15px;
     width: 280px;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       background: $line-color-grey-4;
@@ -77,14 +73,12 @@
 }
 
 .page-header__logo img {
-
   @media (min-width: $tablet) {
     height: 100%;
   }
 }
 
 .page-header__logo img:nth-child(2) {
-
   @media (min-width: $desktop) {
     width: 118px;
     height: 22px;

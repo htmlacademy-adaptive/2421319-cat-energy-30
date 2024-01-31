@@ -31,7 +31,6 @@
 }
 
 .footer-data__logo {
-
   &--htmlacademy {
     display: flex;
     width: 100%;
@@ -57,13 +56,11 @@
   }
 
   &--catenergy {
-
     @media (min-width: $tablet) {
       margin-right: auto;
     }
 
     @media (min-width: $desktop) {
-
       &:hover,
       &:focus {
         opacity: 0.8;

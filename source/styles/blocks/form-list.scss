@@ -28,52 +28,70 @@
   display: flex;
   gap: 13px;
   align-items: center;
+}
 
-  &--email {
-    position: relative;
+.form-list__item--email {
+  position: relative;
 
-    &:after {
-      position: absolute;
-      right: 12px;
-      display: block;
-      width: 20px;
-      height: 20px;
-      background-image: url("../../images/icons/stack.svg#email");
-      background-repeat: no-repeat;
-      background-position: center;
-      content: "";
-
-      @media (min-width: $desktop) {
-        right: 17px;
-      }
-    }
+  &::after {
+    position: absolute;
+    right: 12px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask-image: url("../../images/icons/stack.svg#email");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $special-dark-grey-2;
+    content: "";
 
     @media (min-width: $desktop) {
-      width: 570px;
+      right: 17px;
     }
   }
 
-  &--phone {
-    position: relative;
+  @media (min-width: $desktop) {
+    width: 570px;
+  }
 
-    &:after {
-      position: absolute;
-      right: 11px;
-      display: block;
-      width: 20px;
-      height: 20px;
-      background-image: url("../../images/icons/stack.svg#phone");
-      background-repeat: no-repeat;
-      background-position: center;
-      content: "";
-
-      @media (min-width: $desktop) {
-        right: 17px;
-      }
+  &:focus-within {
+    &::after {
+      background-color: $basic-green;
     }
+  }
+}
+
+.form-list__item--phone {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: 11px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask-image: url("../../images/icons/stack.svg#phone");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $special-dark-grey-2;
+    content: "";
 
     @media (min-width: $desktop) {
-      width: 570px;
+      right: 17px;
+    }
+  }
+
+  &:focus-within {
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+}
+
+.form-list__item--error {
+  &:focus-within {
+    &::after {
+      background-color: $status-error;
     }
   }
 }
@@ -97,7 +115,6 @@
   }
 
   @media (min-width: $desktop) {
-
     &:hover {
       border: 1px solid $line-color-grey-2;
     }

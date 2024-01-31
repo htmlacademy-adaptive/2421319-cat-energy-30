@@ -35,159 +35,154 @@
     grid-template-rows: auto auto;
     width: 22%;
   }
+}
 
-  &--nutrition {
-    position: relative;
+.advantages-list__item--nutrition {
+  position: relative;
 
-    &:before {
+  &::before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/icons/stack.svg#nutrition");
+    background-size: 25px 28px;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+
+    @media (min-width: $tablet) {
       display: block;
-      width: 60px;
-      height: 60px;
-      background-image: url("../../images/icons/stack.svg#nutrition");
-      background-size: 25px 28px;
-      background-color: $basic-green;
-      background-repeat: no-repeat;
-      background-position: center;
-      content: "";
-
-      @media (min-width: $tablet) {
-        display: block;
-        width: 80px;
-        height: 80px;
-      }
-    }
-
-    &:after {
-
-      @media (min-width: $tablet) {
-        position: absolute;
-        top: -41px;
-        right: 17px;
-        z-index: -1;
-        display: block;
-        font-family: $secondary-font;
-        font-size: 280px;
-        line-height: 280px;
-        color: $basic-grey;
-        content: "1";
-      }
+      width: 80px;
+      height: 80px;
     }
   }
 
-  &--form {
-    position: relative;
-
-    &:before {
+  &::after {
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: -41px;
+      right: 17px;
+      z-index: -1;
       display: block;
-      width: 60px;
-      height: 60px;
-      background-image: url("../../images/icons/stack.svg#form");
-      background-size: 30px 32px;
-      background-color: $basic-green;
-      background-repeat: no-repeat;
-      background-position: center;
-      content: "";
-
-      @media (min-width: $tablet) {
-        width: 80px;
-        height: 80px;
-      }
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      content: "1";
     }
+  }
+}
 
-    &:after {
+.advantages-list__item--form {
+  position: relative;
 
-      @media (min-width: $tablet) {
-        position: absolute;
-        top: -41px;
-        right: 0;
-        z-index: -1;
-        display: block;
-        font-family: $secondary-font;
-        font-size: 280px;
-        line-height: 280px;
-        color: $basic-grey;
-        content: "2";
-      }
+  &::before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/icons/stack.svg#form");
+    background-size: 30px 32px;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+
+    @media (min-width: $tablet) {
+      width: 80px;
+      height: 80px;
     }
   }
 
-  &--diet {
-    position: relative;
-
-    &:before {
+  &::after {
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: -41px;
+      right: 0;
+      z-index: -1;
       display: block;
-      width: 60px;
-      height: 60px;
-      background-image: url("../../images/icons/stack.svg#diet");
-      background-size: 26px 29px;
-      background-color: $basic-green;
-      background-repeat: no-repeat;
-      background-position: center;
-      content: "";
-
-      @media (min-width: $tablet) {
-        width: 80px;
-        height: 80px;
-      }
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      content: "2";
     }
+  }
+}
 
-    &:after {
+.advantages-list__item--diet {
+  position: relative;
 
-      @media (min-width: $tablet) {
-        position: absolute;
-        top: -41px;
-        right: 0;
-        z-index: -1;
-        display: block;
-        font-family: $secondary-font;
-        font-size: 280px;
-        line-height: 280px;
-        color: $basic-grey;
-        content: "3";
-      }
+  &::before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/icons/stack.svg#diet");
+    background-size: 26px 29px;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+
+    @media (min-width: $tablet) {
+      width: 80px;
+      height: 80px;
     }
   }
 
-  &--result {
-    position: relative;
-
-    &:before {
+  &::after {
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: -41px;
+      right: 0;
+      z-index: -1;
       display: block;
-      width: 60px;
-      height: 60px;
-      background-image: url("../../images/icons/stack.svg#result");
-      background-size: 26px 31px;
-      background-color: $basic-green;
-      background-repeat: no-repeat;
-      background-position: center;
-      content: "";
-
-      @media (min-width: $tablet) {
-        width: 80px;
-        height: 80px;
-      }
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      content: "3";
     }
+  }
+}
 
-    &:after {
+.advantages-list__item--result {
+  position: relative;
 
-      @media (min-width: $tablet) {
-        position: absolute;
-        top: -41px;
-        right: 0;
-        z-index: -1;
-        display: block;
-        font-family: $secondary-font;
-        font-size: 280px;
-        line-height: 280px;
-        color: $basic-grey;
-        content: "4";
-      }
+  &::before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/icons/stack.svg#result");
+    background-size: 26px 31px;
+    background-color: $basic-green;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+
+    @media (min-width: $tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet) {
+      position: absolute;
+      top: -41px;
+      right: 0;
+      z-index: -1;
+      display: block;
+      font-family: $secondary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      content: "4";
     }
   }
 }
 
 .advantages-list__text {
-
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 24px;

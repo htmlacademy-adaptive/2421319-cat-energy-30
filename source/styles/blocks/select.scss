@@ -41,6 +41,11 @@
   height: 30px;
   background-image: url("../../images/icons/stack.svg#tick");
   content: "";
+
+  @media (min-width: $tablet) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .select__point[type="radio"]:checked + .select__mark::before {
@@ -53,4 +58,18 @@
   background-color: $basic-green;
   border-radius: 50%;
   content: "";
+
+  @media (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.select__point:hover ~ .select__mark,
+.select__point:focus ~ .select__mark {
+  border: 1px solid #bababa;
+}
+
+.select__point:disabled ~ .select__name {
+  opacity: 0.3;
 }

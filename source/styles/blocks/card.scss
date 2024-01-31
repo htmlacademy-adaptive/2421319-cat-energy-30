@@ -7,9 +7,9 @@
   padding-bottom: 24px;
 
   grid-template-areas:
-  "A B"
-  "A C"
-  "D D";
+    "A B"
+    "A C"
+    "D D";
 
   @media (min-width: $tablet) {
     display: flex;
@@ -26,8 +26,7 @@
   }
 
   @media (max-width: $mobile-only) {
-
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       background: $card-line-color-grey;
@@ -39,79 +38,81 @@
       z-index: -1;
     }
   }
+}
 
-  &--option {
-    display: flex;
-    flex-direction: column;
-    padding-top: 13px;
-    padding-bottom: 17px;
-    border-bottom: 1px solid $line-color-grey-2;
+.card--option {
+  display: flex;
+  flex-direction: column;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid $line-color-grey-2;
 
-    @media (min-width: $tablet) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 26px 38px 28px;
-      max-width: 100%;
-      background: none;
-      border: 1px solid $line-color-grey-2;
-      border-bottom: none;
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 26px 38px 28px;
+    max-width: 100%;
+    background: none;
+    border: 1px solid $line-color-grey-2;
+    border-bottom: none;
 
-      &:last-child {
-        border-bottom: 1px solid $line-color-grey-2;
-      }
-    }
-
-    @media (min-width: $desktop) {
-      padding: 13px 0 15px;
-      border-right: none;
-      border-left: none;
-    }
-
-    &:after {
-      display: none;
+    &:last-child {
+      border-bottom: 1px solid $line-color-grey-2;
     }
   }
 
-  &--show-more {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding-top: 25px;
+  @media (min-width: $desktop) {
+    padding: 13px 0 15px;
+    border-right: none;
+    border-left: none;
+  }
 
-    &:before {
-      display: block;
-      margin-bottom: 23px;
-      width: 30px;
-      height: 30px;
-      background: linear-gradient(#d3d3d3,#d3d3d3), linear-gradient(#d3d3d3,#d3d3d3);
-      background-position: center;
-      background-size: 100% 2px, 2px 100%;
-      background-repeat: no-repeat;
-      content: "";
+  &::after {
+    display: none;
+  }
+}
 
-      @media (min-width: $tablet) {
-        margin-bottom: 50px;
-        width: 60px;
-        height: 60px;
-      }
+.card--show-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding-top: 25px;
 
-      @media (min-width: $desktop) {
-        margin-bottom: 37px;
-      }
-    }
+  &::before {
+    display: block;
+    margin-bottom: 23px;
+    width: 30px;
+    height: 30px;
+    background:
+      linear-gradient(#d3d3d3, #d3d3d3),
+      linear-gradient(#d3d3d3, #d3d3d3);
+    background-position: center;
+    background-size: 100% 2px, 2px 100%;
+    background-repeat: no-repeat;
+    content: "";
 
     @media (min-width: $tablet) {
-      margin-top: 80px;
-      padding-top: 50px;
-      background: none;
-      border: 1px solid $basic-grey;
+      margin-bottom: 50px;
+      width: 60px;
+      height: 60px;
     }
 
     @media (min-width: $desktop) {
-      margin-top: 97px;
-      padding-top: 56px;
+      margin-bottom: 37px;
     }
+  }
+
+  @media (min-width: $tablet) {
+    margin-top: 80px;
+    padding-top: 50px;
+    background: none;
+    border: 1px solid $basic-grey;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 97px;
+    padding-top: 56px;
   }
 }
 
@@ -191,7 +192,6 @@
   grid-area: D;
 
   &--option {
-
     @media (min-width: $desktop) {
       width: 244px;
     }

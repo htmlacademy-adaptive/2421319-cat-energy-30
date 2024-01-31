@@ -1,5 +1,4 @@
 .site-list {
-
   @media (min-width: $tablet) {
     display: flex;
     gap: 34px;
@@ -28,8 +27,7 @@
   text-align: center;
 
   @media (max-width: $mobile-only) {
-
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       background: $card-line-color-grey;
@@ -64,21 +62,18 @@
 }
 
 .site-list__item--current .site-list__link {
-
   @media (min-width: $tablet) {
     border-bottom: 2px solid $basic-green;
   }
 }
 
 .site-list__item--current .site-list__link--index {
-
   @media (min-width: $tablet) {
     border-bottom: 2px solid $basic-white;
   }
 }
 
 .site-list__link {
-
   @media (min-width: $tablet) {
     padding-bottom: 6px;
   }

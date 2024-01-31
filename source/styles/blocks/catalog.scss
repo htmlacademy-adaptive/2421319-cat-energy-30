@@ -17,8 +17,7 @@
   padding-bottom: 41px;
 
   @media (max-width: $mobile-only) {
-
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       background: $card-line-color-grey;

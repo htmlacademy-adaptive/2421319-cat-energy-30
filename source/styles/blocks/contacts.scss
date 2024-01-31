@@ -1,5 +1,4 @@
 .contacts__contacts-map {
-
   @media (min-width: $desktop) {
     position: relative;
     width: 100%;
@@ -15,7 +14,11 @@
 
   @media (min-width: $desktop) {
     position: relative;
+    left: calc((100vw - 1220px) / 2);
     z-index: 5;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
   }
 }
 
@@ -61,7 +64,6 @@
 }
 
 .contacts__address span:nth-child(1) {
-
   @media (min-width: $tablet) {
     display: block;
     padding-bottom: 22px;

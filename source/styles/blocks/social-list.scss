@@ -1,13 +1,9 @@
 .social-list {
   display: flex;
   gap: 24px;
-
-  @media (min-width: $tablet) {
-  }
 }
 
 .social-list__link {
-
   &--vk {
     display: block;
     width: 28px;

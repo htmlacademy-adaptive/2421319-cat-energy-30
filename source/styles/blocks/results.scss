@@ -9,20 +9,16 @@
     padding-bottom: 101px;
     background: none;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       background: $grey;
-      height: 461px;
+      height: 462px;
       width: 100vw;
       right: 0;
       bottom: 0;
       box-shadow: 100vw 0 0$grey;
       z-index: -1;
-
-      @media (min-width: $desktop) {
-        height: 462px;
-      }
     }
   }
 
@@ -33,15 +29,14 @@
 }
 
 .results__wrap {
-
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
 
     grid-template-areas:
-    "A C"
-    "B C";
+      "A C"
+      "B C";
   }
 }
 

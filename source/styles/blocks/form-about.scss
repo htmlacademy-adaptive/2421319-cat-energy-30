@@ -3,8 +3,7 @@
   padding-bottom: 24px;
 
   @media (max-width: $mobile-only) {
-
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       background: $card-line-color-grey;
@@ -30,7 +29,6 @@
 }
 
 .form-about__legend {
-
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
