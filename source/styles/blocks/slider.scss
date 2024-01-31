@@ -83,12 +83,12 @@
   &:hover {
     border-color: $basic-green;
 
-    &:after {
+    &::after {
       background-color: $basic-green;
     }
   }
 
-  &:after {
+  &::after {
     content: "";
     display: block;
     width: 24px;
