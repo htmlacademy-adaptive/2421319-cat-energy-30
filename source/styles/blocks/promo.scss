@@ -6,10 +6,9 @@
   background-position: center;
 
   @media (min-width: $tablet) {
-    display: flex;
-    padding: 10px 78px;
     margin-top: 69px;
-    align-items: center;
+    padding: 10px 78px;
+    background-position-y: 60%;
   }
 
   @media (min-width: $desktop) {
@@ -23,25 +22,37 @@
 
 .promo__img {
 
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 219px;
+    width: 505px;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    width: auto;
+  }
+
   &:before {
     display: block;
     margin: auto;
     margin-top: 56px;
     margin-bottom: 48px;
-    width: 78px;
-    height: 80px;
+    width: 80px;
+    height: 82px;
     background-image: url("../../images/icons/stack.svg#promo");
     background-repeat: no-repeat;
     background-position: center;
     content: "";
 
     @media (min-width: $tablet) {
-      margin: 50px 0;
-      padding: 0;
+      margin: 47px 0 52px;
     }
 
     @media (min-width: $desktop) {
-      margin: 56px 0 50px;
+      margin: 56px auto 50px;
     }
   }
 }
@@ -54,8 +65,7 @@
   color: $basic-white;
 
   @media (min-width: $tablet) {
-    margin-left: auto;
-    width: 250px;
+    padding: 0;
     text-align: left;
   }
 

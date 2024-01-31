@@ -1,18 +1,7 @@
+
+
 const navMain = document.querySelector('.page-navigation');
 const navToggle = document.querySelector('.page-header__button');
-
-navMain.classList.remove('page-navigation--nojs');
-
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('page-navigation--closed')) {
-    navMain.classList.remove('page-navigation--closed');
-    navMain.classList.add('page-navigation--opened');
-  } else {
-    navMain.classList.add('page-navigation--closed');
-    navMain.classList.remove('page-navigation--opened');
-  }
-});
-
 
 const slider = document.querySelector('.slider__slider');
 const sliderWrapper = document.querySelector('.slider');
@@ -23,6 +12,44 @@ const sliderAfter = document.querySelector('.slider__image--after');
 let start = false;
 let position;
 let translateX = 0;
+
+navMain.classList.remove('page-navigation--nojs');
+
+navToggle.addEventListener('click', () => {
+  if (navMain.classList.contains('page-navigation--closed')) {
+    navMain.classList.remove('page-navigation--closed');
+    navMain.classList.add('page-navigation--opened');
+  } else {
+    navMain.classList.add('page-navigation--closed');
+    navMain.classList.remove('page-navigation--opened');
+  }
+});
+
+const slideIt = (x) => {
+  const sliderBeforeWidth = Math.round(
+    sliderBefore.getBoundingClientRect().width - x
+  );
+  const sliderAfterWidth =
+    sliderWrapper.getBoundingClientRect().width - sliderBeforeWidth;
+
+  sliderBefore.style.width = `${sliderBeforeWidth }px`;
+  sliderAfter.style.width = `${sliderAfterWidth }px`;
+
+  let sliderTranslate = translateX - x;
+
+  if (sliderTranslate > sliderWrapper.getBoundingClientRect().width / 2) {
+    sliderTranslate = sliderWrapper.getBoundingClientRect().width / 2;
+  }
+
+  if (
+    sliderTranslate <
+    (sliderWrapper.getBoundingClientRect().width / 2) * -1
+  ) {
+    sliderTranslate = (sliderWrapper.getBoundingClientRect().width / 2) * -1;
+  }
+  slider.style.transform = `translateX(${sliderTranslate}px)`;
+  translateX -= x;
+};
 
 if (sliderButton && slider) {
   sliderButton.addEventListener('pointerdown', () => {
@@ -45,32 +72,6 @@ if (sliderButton && slider) {
     start = false;
   });
 }
-
-const slideIt = (x) => {
-  const sliderBeforeWidth = Math.round(
-    sliderBefore.getBoundingClientRect().width - x
-  );
-  const sliderAfterWidth =
-    sliderWrapper.getBoundingClientRect().width - sliderBeforeWidth;
-
-  sliderBefore.style.width = sliderBeforeWidth + 'px';
-  sliderAfter.style.width = sliderAfterWidth + 'px';
-
-  let sliderTranslate = translateX - x;
-
-  if (sliderTranslate > sliderWrapper.getBoundingClientRect().width / 2) {
-    sliderTranslate = sliderWrapper.getBoundingClientRect().width / 2;
-  }
-
-  if (
-    sliderTranslate <
-    (sliderWrapper.getBoundingClientRect().width / 2) * -1
-  ) {
-    sliderTranslate = (sliderWrapper.getBoundingClientRect().width / 2) * -1;
-  }
-  slider.style.transform = `translateX(${sliderTranslate}px)`;
-  translateX -= x;
-};
 
 ymaps.ready(init);
 function init(){

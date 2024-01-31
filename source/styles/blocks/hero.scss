@@ -12,19 +12,27 @@
 
   @media (min-width: $desktop) {
     position: relative;
+    margin: 0;
+    margin-bottom: 57px;
+    padding: 86px 0 66px;
+    width: 100vw;
+    min-height: 580px;
+    background: none;
 
     &:before {
       position: absolute;
       display: block;
-      top: 0;
-      left: 0;
-      width: 700px;
-      min-height: 694px;
+      top: -168px;
+      right: 0;
+      z-index: -10;
+      width: 50vw;
+      min-height: 129%;
       background-image: linear-gradient(rgba(104,183,56,.851),rgba(104,183,56,.851)),
-                        image-set(url(../../images/hero-background-desktop@2x.jpg) 2x, url(../../images/hero-background-desktop@1x.jpg) 1x);
-      background-position: right;
+                        image-set(url(../../images/hero-background-desktop@2x.jpg) 2x, url(../../images/hero-background-desktop@1x.jpg) 1x),
+                        linear-gradient(to right,rgb(76, 76, 78),rgb(59, 59, 61));
+      background-position: bottom;
+      background-position-x: 0;
       background-repeat: no-repeat;
-      background-size: 50%;
       content: "";
     }
   }
@@ -35,6 +43,12 @@
 
   @media (min-width: $tablet) {
     padding: 28px 90px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: auto;
+    padding: 0 800px 0 190px;
+    max-width: 1440px;
   }
 }
 

@@ -5,6 +5,12 @@
     gap: 34px;
   }
 
+  @media (min-width: $desktop) {
+    flex-wrap: wrap;
+    padding-top: 8px;
+    gap: 15px 32px;
+  }
+
   &--index {
     @media (min-width: $desktop) {
       color: $basic-white;
@@ -45,6 +51,15 @@
   @media (min-width: $desktop) {
     font-size: 20px;
     line-height: normal;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -53,16 +68,12 @@
   @media (min-width: $tablet) {
     border-bottom: 2px solid $basic-green;
   }
+}
 
-  @media (min-width: $desktop) {
+.site-list__item--current .site-list__link--index {
 
-    &:hover {
-      color: rgb(0, 0, 0, 0.6);
-    }
-
-    &:active {
-      color: rgb(0, 0, 0, 0.3);
-    }
+  @media (min-width: $tablet) {
+    border-bottom: 2px solid $basic-white;
   }
 }
 
@@ -71,31 +82,4 @@
   @media (min-width: $tablet) {
     padding-bottom: 6px;
   }
-
-  @media (min-width: $desktop) {
-
-    &:hover {
-      color: rgb(0, 0, 0, 0.6);
-    }
-
-    &:active {
-      color: rgb(0, 0, 0, 0.3);
-    }
-  }
 }
-
-.site-list--index  .site-list__link {
-
-  @media (min-width: $desktop) {
-
-    &:hover {
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    &:active {
-      color: rgb(255, 255, 255, 0.3);
-    }
-  }
-}
-
-
