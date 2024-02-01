@@ -163,6 +163,8 @@
   &--show-more {
     padding: 0 0 8px;
 
+    cursor: default;
+
     @media (min-width: $tablet) {
       padding: 0 40px 23px;
     }

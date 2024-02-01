@@ -110,6 +110,8 @@
   line-height: 37px;
   text-transform: uppercase;
 
+  cursor: default;
+
   grid-area: B;
 
   @media (min-width: $tablet) {
