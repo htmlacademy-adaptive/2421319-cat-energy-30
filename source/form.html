@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>CAT ENERGY</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="/fonts/lato-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswald-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
@@ -43,7 +45,7 @@
         </nav>
       </div>
     </header>
-
+    <!-- для состояния error добавьте модификатор error на form-list__item -->
     <main class="page__main">
       <section class="program-form container container--form">
         <h1 class="program-form__title title">Подбор программы</h1>
@@ -95,7 +97,7 @@
 
           <fieldset class="program-form__contacts form-contacts form">
             <legend class="form-contacts__legend legend">Контактные данные (владельца кота)</legend>
-            <ul class="form-contacts__list form-list form-list--contacts  list">
+            <ul class="form-contacts__list form-list form-list--contacts list">
               <li class="form-list__item form-list__item--email">
                 <label class="form-list__label label" for="email">E-mail:*</label>
                 <input class="form-list__input" type="email" name="email" placeholder="kuklachev@gmail.com" id="email" required>
@@ -214,6 +216,6 @@
     src="https://api-maps.yandex.ru/2.1/?apikey=1cc9796c-16b2-4656-b3d3-702a2b839f18&lang=ru_RU"
     defer
     ></script>
-  <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js" defer></script>
   </body>
 </html>

@@ -6,6 +6,8 @@
   line-height: 36px;
   color: $basic-black;
 
+  cursor: default;
+
   @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;

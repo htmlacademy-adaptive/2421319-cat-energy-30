@@ -16,7 +16,6 @@
   }
 }
 
-
 .slider__image {
   position: relative;
   width: 50%;
@@ -75,14 +74,31 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  mask-image:
-    linear-gradient(#ffffff, #ffffff),
-    url("../../images/icons/stack.svg#thumb");
-  background-color: $basic-green;
+
+  background-color: $basic-white;
+
   border: 2px solid $special-grey-2;
   cursor: pointer;
 
   &:hover {
-    border: 2px solid $basic-green;
+    border-color: $basic-green;
+
+    &::after {
+      background-color: $basic-green;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 18px;
+    mask-image: url("../../images/icons/stack.svg#thumb");
+    background-color: $special-grey-2;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

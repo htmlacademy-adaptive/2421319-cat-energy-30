@@ -57,6 +57,8 @@
   font-style: inherit;
   line-height: 20px;
 
+  cursor: default;
+
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;

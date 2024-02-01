@@ -42,4 +42,10 @@
     line-height: 30px;
     text-align: left;
   }
+
+  &:hover {
+    @media (min-width: $desktop) {
+      border: 1px solid $line-color-grey-2;
+    }
+  }
 }

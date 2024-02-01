@@ -92,14 +92,6 @@
   }
 }
 
-.form-list__item--error {
-  &:focus-within {
-    &::after {
-      background-color: $status-error;
-    }
-  }
-}
-
 .form-list__input {
   flex: 1;
   padding: 0 15px;
@@ -122,18 +114,17 @@
     &:hover {
       border: 1px solid $line-color-grey-2;
     }
+  }
 
-    &:focus {
-      border: 2px solid $special-dark-grey;
-    }
-
-    &--error {
-      border: 2px solid $status-error;
-    }
+  &:focus {
+    border: 2px solid $special-dark-grey;
   }
 }
 
-.form-list__item--email .form-list__input,
-.form-list__item--phone .form-list__input {
-  border: 1px solid $line-color-grey-2;
+.form-list__item--error .form-list__input {
+  border: 2px solid $status-error;
+}
+
+.form-list__item--error::after {
+  background-color: $status-error;
 }
